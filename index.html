@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Ethnography Globe Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="intro" aria-label="Global ethnography introduction">
+        <p class="eyebrow intro-draggable" data-intro-key="eyebrow">全球民族志地图</p>
+        <h1 class="intro-draggable" data-intro-key="title">World Ethnography</h1>
+        <p class="lede intro-draggable" data-intro-key="lede">自由拖动地球，探索全球各个角落的民族志作品。</p>
+      </section>
+
+      <section class="globe-stage" aria-label="Interactive outlined globe">
+        <canvas id="globeCanvas"></canvas>
+        <div class="vignette" aria-hidden="true"></div>
+      </section>
+
+      <aside id="bookCard" class="book-card is-hidden" aria-live="polite">
+        <button id="bookCardClose" class="book-card-close" type="button" aria-label="关闭卡片">
+          ×
+        </button>
+        <div class="book-card-loc-wrap" aria-label="田野地点">
+          <p class="book-card-location book-card-location-zh" id="bookLocationZh"></p>
+          <p class="book-card-location book-card-location-en" id="bookLocationEn"></p>
+        </div>
+        <p class="book-card-title book-card-title-zh" id="bookTitleZh"></p>
+        <p class="book-card-title-en" id="bookTitleEn" aria-label="Subtitle in English"></p>
+        <p class="book-card-meta" id="bookMeta"></p>
+        <p class="book-card-summary" id="bookSummary"></p>
+      </aside>
+
+      <div class="drag-hint" aria-hidden="true">
+        <span></span>
+        长按拖动地球
+      </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+    <script src="./books-data.js?v=6"></script>
+    <script src="./globe.js?v=15"></script>
+  </body>
+</html>
