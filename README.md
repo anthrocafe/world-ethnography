@@ -1,43 +1,33 @@
 # World Ethnography
 
-一个静态网站项目（`index.html` + `styles.css` + `globe.js` + `books-data.js`），适合部署到 Cloudflare Pages / Netlify / Vercel。
+**全球民族志地图**：在可交互的地球仪上浏览各地的民族志著作，支持关键词搜索与地点聚焦，以卡片形式呈现书目信息与简介。
 
-## 本地维护流程（可持续）
+## 正式网址
 
-1. 修改 `民族志信息表.xlsx`
-2. 运行同步脚本：
-   - `python3 scripts/sync_books_from_xlsx.py`
-3. 本地预览：
-   - 直接打开 `index.html`，抽查若干卡片内容和样式
-4. 提交并推送：
-   - `git add .`
-   - `git commit -m "update ethnography entries"`
-   - `git push`
-5. 托管平台自动重新部署上线
+**[https://worldethnography.com](https://worldethnography.com)**
 
-## 首次上线（推荐：Cloudflare Pages）
+在浏览器中打开即可使用；无需安装客户端。
 
-1. 把项目推到 GitHub 仓库
-2. 进入 Cloudflare Dashboard -> Pages -> Create project
-3. 连接 GitHub 仓库并选择本项目
-4. Build settings:
-   - Framework preset: `None`
-   - Build command: 留空
-   - Build output directory: `/`（根目录）
-5. Deploy，等待完成后获得 `*.pages.dev` 访问地址
+## 项目说明
 
-## 自定义域名（可选）
+本站为静态前端项目（`index.html`、`styles.css`、`globe.js`、`books-data.js`），数据由 `books-data.js` 驱动。地图上的点位与书目卡片对应人类学/民族志类作品及其主要田野或叙事发生地，便于从空间维度探索相关阅读。
 
-1. 在 Pages 项目里添加你的域名
-2. 按 Cloudflare 提示配置 DNS
-3. SSL 会自动签发，生效后可通过你的域名访问
+图书封面仅用于作品识别、介绍与学术传播；版权归原作者或权利人所有。
 
-## 说明
+## 技术栈与部署
 
-- `books-data.js` 是网站最终数据源
-- `民族志信息表.xlsx` 是便于人工维护的源表
-- 同步脚本会：
-  - 将表中不存在的条目从网站数据中删除
-  - 按英文标题同步中文译名
-  - 校验同步后条目集合是否与表格一致
+- 纯静态资源，可部署在 Cloudflare Pages、Netlify、Vercel 等任意静态托管。
+- 构建步骤：将仓库根目录作为站点根目录发布即可（无构建命令亦可）。
 
+## 维护者：本地更新数据（可选）
+
+民族志条目维护用表格**不放入本仓库**（见 `.gitignore` 中的 `民族志信息表*.xlsx`）。请在本地准备与脚本默认路径一致的 xlsx，然后：
+
+1. 编辑本地的 `民族志信息表-0513.xlsx`（或你使用的同系列命名文件）。
+2. 运行同步脚本，例如：
+   - `python3 scripts/sync_books_from_xlsx.py`  
+   - 或仓库内其他 `scripts/*.py`（按你当前工作流选择）。
+3. 检查生成的 `books-data.js` 与页面展示。
+4. 提交并推送本站相关变更（勿提交 xlsx）。
+
+首次在 Cloudflare Pages 等平台连接本 GitHub 仓库时：Framework 选 None，输出目录为 `/`，构建命令留空即可。
