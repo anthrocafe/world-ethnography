@@ -1082,6 +1082,10 @@ function isMobileFocusLayout() {
   return state.width <= 760 || window.matchMedia("(max-width: 760px)").matches;
 }
 
+function isMobileFocusCoverLayout() {
+  return state.focusMode && isMobileFocusLayout();
+}
+
 function syncRegionCoverPositions() {
   if (!regionCoverLayer || regionCoverLayer.childElementCount === 0) return;
 
@@ -1197,9 +1201,10 @@ function syncRegionCoverPositions() {
 
 function coverVisualSize(btn) {
   const imageSize = coverImageSize(btn);
+  const mobile = isMobileFocusCoverLayout();
   return {
-    width: Math.max(140, imageSize.width + 24),
-    height: imageSize.height + 32,
+    width: Math.max(mobile ? 108 : 140, imageSize.width + (mobile ? 18 : 24)),
+    height: imageSize.height + (mobile ? 24 : 32),
   };
 }
 
@@ -1374,29 +1379,33 @@ function coverLayoutPinObstacles() {
 }
 
 function fitCoverScalesToViewport(entries) {
-  const margin = 18;
-  const gap = 12;
+  const mobile = isMobileFocusCoverLayout();
+  const margin = mobile ? 14 : 18;
+  const gap = mobile ? 14 : 12;
   const count = entries.length;
   const availableWidth = Math.max(140, state.width - margin * 2);
-  const availableHeight = Math.max(180, state.height - margin * 2);
-  let bestScale = 0.58;
+  const bottomReserve = mobile ? Math.max(88, Math.min(128, state.height * 0.14)) : 0;
+  const availableHeight = Math.max(180, state.height - margin * 2 - bottomReserve);
+  let bestScale = mobile ? 0.42 : 0.58;
   let bestScore = -Infinity;
 
   for (let columns = 1; columns <= count; columns += 1) {
     const rows = Math.ceil(count / columns);
     const slotWidth = (availableWidth - gap * (columns - 1)) / columns;
     const slotHeight = (availableHeight - gap * (rows - 1)) / rows;
-    const widthScale = (slotWidth - 24) / 116;
-    const heightScale = (slotHeight - 32) / 174;
+    const widthScale = (slotWidth - (mobile ? 18 : 24)) / 116;
+    const heightScale = (slotHeight - (mobile ? 24 : 32)) / 174;
     const scale = Math.min(widthScale, heightScale);
-    const score = scale * 100 - rows * 4 - Math.abs(columns - rows) * 0.8;
-    if (slotWidth >= 128 && slotHeight >= 150 && score > bestScore) {
+    const score = scale * 100 - rows * (mobile ? 6 : 4) - Math.abs(columns - rows) * 0.8;
+    const minSlotWidth = mobile ? 102 : 128;
+    const minSlotHeight = mobile ? 126 : 150;
+    if (slotWidth >= minSlotWidth && slotHeight >= minSlotHeight && score > bestScore) {
       bestScore = score;
       bestScale = scale;
     }
   }
 
-  const maxScale = clamp(bestScale, 0.58, 1.16);
+  const maxScale = clamp(bestScale, mobile ? 0.42 : 0.58, mobile ? 0.82 : 1.16);
   for (const entry of entries) {
     const baseScale = Number(entry.btn.dataset.baseCoverScale || entry.btn.style.getPropertyValue("--cover-scale")) || 1;
     entry.btn.style.setProperty("--cover-scale", Math.min(baseScale, maxScale).toFixed(3));
@@ -1457,8 +1466,23 @@ function coverLayoutClusterCandidates(item, layoutContext) {
 
 function coverLayoutCandidateScore(kind, x, y, pin, shift, pinOverlap, jitter) {
   const distance = Math.hypot(x - pin.x, y - pin.y);
+  const mobile = isMobileFocusCoverLayout();
   const distanceWeight = kind === "cluster" ? 0.78 : 1;
-  const kindPenalty = kind === "grid" ? 82 : kind === "ring" ? 18 : kind === "cluster" ? -30 : 0;
+  const kindPenalty = mobile
+    ? kind === "grid"
+      ? -12
+      : kind === "cluster"
+        ? 10
+        : kind === "ring"
+          ? 34
+          : 28
+    : kind === "grid"
+      ? 82
+      : kind === "ring"
+        ? 18
+        : kind === "cluster"
+          ? -30
+          : 0;
   const viewportBalance = Math.abs(y - state.height * 0.48) * 0.08;
   return distance * distanceWeight + shift * 760 + pinOverlap * 420 + kindPenalty + viewportBalance + jitter;
 }
@@ -1506,29 +1530,31 @@ function coverLayoutCandidates(item, layoutContext) {
     }
   }
 
-  for (const slot of gridSlotsForSize(size, 5)) {
+  for (const slot of gridSlotsForSize(size, isMobileFocusCoverLayout() ? Math.max(5, layoutContext.count) : 5)) {
     addCandidate(slot.x, slot.y, "grid");
   }
 
-  return candidates.sort((a, b) => a.score - b.score).slice(0, 96);
+  return candidates.sort((a, b) => a.score - b.score).slice(0, isMobileFocusCoverLayout() ? 140 : 96);
 }
 
 function gridFallbackCoverLayout(items, protectedPins = []) {
-  const margin = 18;
-  const gap = 12;
+  const mobile = isMobileFocusCoverLayout();
+  const margin = mobile ? 14 : 18;
+  const gap = mobile ? 14 : 12;
   const maxWidth = Math.max(...items.map((item) => item.size.width));
   const maxHeight = Math.max(...items.map((item) => item.size.height));
   const count = items.length;
   let best = null;
+  const bottomReserve = mobile ? Math.max(88, Math.min(128, state.height * 0.14)) : 0;
 
   for (let columns = 1; columns <= count; columns += 1) {
     const rows = Math.ceil(count / columns);
     const usedWidth = columns * maxWidth + (columns - 1) * gap;
     const usedHeight = rows * maxHeight + (rows - 1) * gap;
-    if (usedWidth > state.width - margin * 2 || usedHeight > state.height - margin * 2) continue;
+    if (usedWidth > state.width - margin * 2 || usedHeight > state.height - margin * 2 - bottomReserve) continue;
 
     const startX = (state.width - usedWidth) / 2 + maxWidth / 2;
-    const startY = (state.height - usedHeight) / 2 + maxHeight / 2;
+    const startY = (state.height - bottomReserve - usedHeight) / 2 + maxHeight / 2;
     const slots = [];
     for (let row = 0; row < rows; row += 1) {
       for (let column = 0; column < columns; column += 1) {
@@ -1581,12 +1607,14 @@ function gridFallbackCoverLayout(items, protectedPins = []) {
 }
 
 function gridSlotsForSize(size, maxRows) {
-  const margin = 18;
-  const gap = 12;
+  const mobile = isMobileFocusCoverLayout();
+  const margin = mobile ? 14 : 18;
+  const gap = mobile ? 14 : 12;
+  const bottomReserve = mobile ? Math.max(88, Math.min(128, state.height * 0.14)) : 0;
   const minX = size.width / 2 + margin;
   const maxX = state.width - size.width / 2 - margin;
   const minY = size.height / 2 + margin;
-  const maxY = state.height - size.height / 2 - margin;
+  const maxY = state.height - bottomReserve - size.height / 2 - margin;
   const columns = Math.max(1, Math.floor((maxX - minX + gap) / Math.max(1, size.width + gap)) + 1);
   const rows = Math.max(1, Math.min(maxRows, Math.floor((maxY - minY + gap) / Math.max(1, size.height + gap)) + 1));
   const slots = [];
@@ -1603,9 +1631,12 @@ function gridSlotsForSize(size, maxRows) {
 }
 
 function clampCoverCenter(x, y, size) {
+  const mobile = isMobileFocusCoverLayout();
+  const margin = mobile ? 14 : 18;
+  const bottomReserve = mobile ? Math.max(88, Math.min(128, state.height * 0.14)) : 0;
   return {
-    x: clamp(x, size.width / 2 + 18, state.width - size.width / 2 - 18),
-    y: clamp(y, size.height / 2 + 18, state.height - size.height / 2 - 18),
+    x: clamp(x, size.width / 2 + margin, state.width - size.width / 2 - margin),
+    y: clamp(y, size.height / 2 + margin, state.height - bottomReserve - size.height / 2 - margin),
   };
 }
 
@@ -1618,7 +1649,9 @@ function clampCoverCenterWithShift(x, y, size) {
 }
 
 function resolveCoverCenterAvoidingPins(x, y, size, pinObstacles = coverLayoutPinObstacles()) {
-  const margin = 18;
+  const mobile = isMobileFocusCoverLayout();
+  const margin = mobile ? 14 : 18;
+  const bottomReserve = mobile ? Math.max(88, Math.min(128, state.height * 0.14)) : 0;
   const center = clampCoverCenter(x, y, size);
 
   for (let step = 0; step < 18; step += 1) {
@@ -1633,7 +1666,7 @@ function resolveCoverCenterAvoidingPins(x, y, size, pinObstacles = coverLayoutPi
     }
 
     center.x = clamp(center.x, size.width / 2 + margin, state.width - size.width / 2 - margin);
-    center.y = clamp(center.y, size.height / 2 + margin, state.height - size.height / 2 - margin);
+    center.y = clamp(center.y, size.height / 2 + margin, state.height - bottomReserve - size.height / 2 - margin);
     if (!moved || !rectOverlapsPinObstacles(coverRectAt(center.x, center.y, size), pinObstacles)) break;
   }
 
@@ -1664,7 +1697,8 @@ function applyCoverLayoutPosition(item, x, y) {
 // separation with pin repulsion until stable, then sync layout datasets.
 function refineCoverLayoutAgainstPinsAndOverlaps(entries) {
   const obstacles = coverLayoutPinObstacles();
-  const pad = 10;
+  const mobile = isMobileFocusCoverLayout();
+  const pad = mobile ? 14 : 10;
   const items = entries
     .filter((e) => e.pin && e.pin.z > 0.04)
     .map((e) => {
@@ -2676,7 +2710,7 @@ function positionFocusSplitBookCard() {
 
 function positionMobileFocusBookCard() {
   if (!bookCard.classList.contains("book-card--focus-mobile")) return;
-  const bottomMargin = Math.max(78, Math.min(112, state.height * 0.12));
+  const bottomMargin = Math.max(132, Math.min(172, state.height * 0.18));
   bookCard.style.left = `${state.width * 0.5}px`;
   bookCard.style.top = `${state.height - bottomMargin}px`;
 }

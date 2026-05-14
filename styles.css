@@ -1000,10 +1000,36 @@ body.is-drag-hint-visible .drag-hint {
     width: calc(100vw - 32px);
     min-width: 0;
     max-width: calc(100vw - 32px);
+    max-height: min(560px, calc(100dvh - 232px));
     padding: 18px;
     border-radius: 18px;
     box-shadow: 0 18px 42px rgba(30, 24, 20, 0.2);
     overscroll-behavior: contain;
+  }
+
+  body.is-region-focus .focus-cover-notice {
+    left: 22px;
+    bottom: 18px;
+    max-width: calc(100vw - 44px);
+  }
+
+  body.is-focus-cover-notice-visible .focus-cover-notice {
+    opacity: 0.62;
+  }
+
+  .focus-cover-notice__zh,
+  .focus-cover-notice__en {
+    font-size: 9px;
+    line-height: 1.32;
+    letter-spacing: 0.01em;
+  }
+
+  .focus-cover-notice__zh {
+    margin-bottom: 3px;
+  }
+
+  .focus-cover-notice__en {
+    font-size: 8.7px;
   }
 
   /* Compact circular search on narrow viewports; expands when focused or has text */
