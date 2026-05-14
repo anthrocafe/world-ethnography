@@ -644,6 +644,22 @@ body.is-drag-hint-visible .drag-hint {
   transform: translate(0, -50%) !important;
 }
 
+.book-card.book-card--focus-mobile {
+  z-index: 24;
+  max-height: min(620px, calc(100dvh - 176px));
+  overflow-y: auto;
+  transform: translate(-50%, -100%);
+  transition:
+    left var(--book-card-fade-duration) var(--book-card-fade-ease),
+    top var(--book-card-fade-duration) var(--book-card-fade-ease),
+    opacity var(--book-card-fade-duration) var(--book-card-fade-ease),
+    transform var(--book-card-fade-duration) var(--book-card-fade-ease);
+}
+
+.book-card.book-card--focus-mobile.is-hidden {
+  transform: translate(-50%, -50%) scale(0.88);
+}
+
 .book-card-close {
   position: absolute;
   top: 14px;
@@ -761,6 +777,13 @@ body.is-drag-hint-visible .drag-hint {
 
 .book-card-title-en.is-empty {
   display: none;
+}
+
+/* Long paired titles: JS adds `.book-card--title-single-line` + raises width cap (see globe.js). */
+.book-card.book-card--title-single-line .book-card-title-zh,
+.book-card.book-card--title-single-line .book-card-title-en {
+  white-space: nowrap;
+  overflow-wrap: normal;
 }
 
 .book-card-meta {
@@ -954,5 +977,15 @@ body.is-drag-hint-visible .drag-hint {
   .book-card {
     min-width: min(260px, calc(100vw - 36px));
     max-width: calc(100vw - 36px);
+  }
+
+  .book-card.book-card--focus-mobile {
+    width: calc(100vw - 32px);
+    min-width: 0;
+    max-width: calc(100vw - 32px);
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0 18px 42px rgba(30, 24, 20, 0.2);
+    overscroll-behavior: contain;
   }
 }

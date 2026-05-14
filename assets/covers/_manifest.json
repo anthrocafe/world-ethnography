@@ -418,5 +418,35 @@
     "bytes": 715459,
     "status": "ok",
     "error": null
+  },
+  {
+    "slug": "veiled-sentiments",
+    "sheet": "新月地带",
+    "title": "Veiled Sentiments",
+    "author": "Lila Abu-Lughod",
+    "year": 1986,
+    "publisher": "University of California Press",
+    "isbn": "9780520292499",
+    "source_page": "https://www.ucpress.edu/books/veiled-sentiments/paper",
+    "cover_url": "https://webfiles.ucpress.edu/coverimage/isbn13/9780520292499.jpg",
+    "saved_path": "assets/covers/veiled-sentiments.jpg",
+    "bytes": 163721,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "slug": "gathering-medicines",
+    "sheet": "西南地区",
+    "title": "Gathering Medicines",
+    "author": "Judith Farquhar & Lili Lai",
+    "year": 2021,
+    "publisher": "University of Chicago Press",
+    "isbn": "9780226763651",
+    "source_page": "https://press.uchicago.edu/ucp/books/book/chicago/G/bo78678179.html",
+    "cover_url": "https://press.uchicago.edu/.imaging/mte/ucp/large/dam/ucp/books/jacket/978/02/26/76/9780226763651.jpg/jcr:content/9780226763651.jpg",
+    "saved_path": "assets/covers/gathering-medicines.jpg",
+    "bytes": 416125,
+    "status": "ok",
+    "error": null
   }
 ]

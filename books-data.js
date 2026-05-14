@@ -67,7 +67,17 @@ window.ETHNOGRAPHY_BOOKS = [
     "lat": 10.5,
     "lon": -4.5,
     "sourceField": "西非·布基纳法索 / 科特迪瓦",
-    "locationEn": "West Africa·Burkina Faso / Côte d'Ivoire"
+    "locationEn": "West Africa·Burkina Faso / Côte d'Ivoire",
+    "sites": [
+      {
+        "lat": 12.3714,
+        "lon": -1.5197
+      },
+      {
+        "lat": 5.36,
+        "lon": -4.0083
+      }
+    ]
   },
   {
     "id": "ethnography-06",
@@ -178,18 +188,50 @@ window.ETHNOGRAPHY_BOOKS = [
     ]
   },
   {
+    "id": "ethnography-38",
+    "title": "《美丽的生命政治》（The Biopolitics of Beauty）",
+    "year": 2017,
+    "author": "Alvaro Jarrín",
+    "publisher": "University of California Press",
+    "summary": "巴西公立医院中的整形手术如何将美丽建构为国家健康目标，揭示其与种族、阶级的历史纠缠。\n\n医院田野调查结合优生学历史档案与患者访谈。\n\n美被理论化为\"情感资本\"；整形手术制造了\"美学公民身份\"，在消解种族焦虑的表象下持续强化阶级与种族等级。",
+    "location": "Rio de Janeiro / São Paulo",
+    "countryOrRegion": "Brazil",
+    "lat": -22.9068,
+    "lon": -43.1729,
+    "sourceField": "巴西·里约热内卢 / 圣保罗",
+    "locationEn": "Brazil·Rio de Janeiro / São Paulo"
+  },
+  {
     "id": "ethnography-11",
     "title": "《末日松茸》(The Mushroom at the End of the World)",
     "year": 2015,
     "author": "Anna Tsing（罗安清）",
     "publisher": "Princeton University Press",
     "summary": "松茸商品链串联美国、日本、中国、芬兰的劳动、生态与多物种关系。\n\n多点田野调查，追踪松茸从森林到市场的全程。\n\n在资本主义废墟中，非正规合作与多物种共存仍可孕育生机，挑战线性进步叙事。",
-    "location": "Japan - China - Finland",
-    "countryOrRegion": "USA (Oregon)",
+    "location": "Oregon / Kyoto / Yunnan / Lapland",
+    "countryOrRegion": "USA / Japan / China / Finland",
     "lat": 44.0582,
     "lon": -121.3153,
     "sourceField": "美国（俄勒冈） / 日本（京都） / 中国（云南） / 芬兰（拉普兰）",
-    "locationEn": "USA (Oregon) / Japan (Kyoto) / China (Yunnan) / Finland (Lapland)"
+    "locationEn": "USA (Oregon) / Japan (Kyoto) / China (Yunnan) / Finland (Lapland)",
+    "sites": [
+      {
+        "lat": 44.0582,
+        "lon": -121.3153
+      },
+      {
+        "lat": 35.0116,
+        "lon": 135.7681
+      },
+      {
+        "lat": 25.0389,
+        "lon": 102.7183
+      },
+      {
+        "lat": 66.5039,
+        "lon": 25.7294
+      }
+    ]
   },
   {
     "id": "ethnography-12",
@@ -204,20 +246,6 @@ window.ETHNOGRAPHY_BOOKS = [
     "lon": -77.72,
     "sourceField": "厄瓜多尔·阿维拉",
     "locationEn": "Ecuador·Avila"
-  },
-  {
-    "id": "ethnography-13",
-    "title": "《在棕榈树的阴影下》(In the Shadow of the Palms)",
-    "year": 2022,
-    "author": "Sophie Chao",
-    "publisher": "Duke University Press",
-    "summary": "油棕种植园扩张对印尼西巴布亚马林德人多物种世界的系统性摧毁。\n\n社区民族志与多物种田野考察。\n\n工业农业造成存在性灾难：不仅是生态危机，更是本体论意义上的世界终结与哀悼。",
-    "location": "West Papua, Maro River Region",
-    "countryOrRegion": "Indonesia",
-    "lat": -8.49,
-    "lon": 140.39,
-    "sourceField": "印尼·西巴布亚 莫劳河区域",
-    "locationEn": "Indonesia·West Papua, Maro River Region"
   },
   {
     "id": "ethnography-14",
@@ -451,7 +479,17 @@ window.ETHNOGRAPHY_BOOKS = [
     "lat": 1.0,
     "lon": -63.0,
     "sourceField": "巴西 / 委内瑞拉·亚马逊森林",
-    "locationEn": "Brazil / Venezuela·Amazon Rainforest"
+    "locationEn": "Brazil / Venezuela·Amazon Rainforest",
+    "sites": [
+      {
+        "lat": 1.0,
+        "lon": -63.0
+      },
+      {
+        "lat": 3.5,
+        "lon": -66.0
+      }
+    ]
   },
   {
     "id": "ethnography-31",
@@ -552,18 +590,66 @@ window.ETHNOGRAPHY_BOOKS = [
     "locationEn": "Mozambique·Mueda Plateau"
   },
   {
-    "id": "ethnography-38",
-    "title": "《美丽的生命政治》(The Biopolitics of Beauty)",
-    "year": 2017,
-    "author": "Alvaro Jarrín",
+    "id": "ethnography-68",
+    "title": "《在全球的边缘》(On the Edge of the Global)",
+    "year": 2011,
+    "author": "Niko Besnier",
+    "publisher": "Stanford University Press",
+    "summary": "汤加人在全球化、移民压力与本土身份认同之间产生的现代性焦虑与道德危机感。\n\n汤加群岛多社区田野调查，结合海外侨民网络与媒体研究。\n\n太平洋岛民并非全球化的被动接受者，而是在移动与根植之间艰难维持主体性的现代主体；焦虑本身是结构性的。",
+    "location": "Tongan Islands (Polynesia)",
+    "countryOrRegion": "Tonga",
+    "lat": -21.18,
+    "lon": -175.2,
+    "sourceField": "汤加·汤加群岛",
+    "locationEn": "Tonga·Tongan Islands (Polynesia)"
+  },
+  {
+    "id": "ethnography-86",
+    "title": "《敞坟之地》(The Land of Open Graves)",
+    "year": 2015,
+    "author": "Jason De Léon",
     "publisher": "University of California Press",
-    "summary": "巴西公立医院中的整形手术如何将美丽建构为国家健康目标，揭示其与种族、阶级的历史纠缠。\n\n医院田野调查结合优生学历史档案与患者访谈。\n\n美被理论化为\"情感资本\"；整形手术制造了\"美学公民身份\"，在消解种族焦虑的表象下持续强化阶级与种族等级。",
-    "location": "Rio de Janeiro / São Paulo",
-    "countryOrRegion": "Brazil",
-    "lat": -22.9068,
-    "lon": -43.1729,
-    "sourceField": "巴西·里约热内卢 / 圣保罗",
-    "locationEn": "Brazil·Rio de Janeiro / São Paulo"
+    "summary": "以政策民族志与考古学、取证方法结合，揭示美国的边境政策如何将索诺拉沙漠变为无证移民的坟场。\n\n多年跟踪田野结合幸存者访谈与对遗留物品的物质分析。\n\n美国边境政策将死亡转嫁给沙漠和非人类行动者，掩盖了边境政策的系统性暴力。",
+    "location": "Mexico (Sonora)",
+    "countryOrRegion": "USA (Arizona)",
+    "lat": 31.3322,
+    "lon": -110.9378,
+    "sourceField": "美国（亚利桑那州） / 墨西哥（索诺拉州）",
+    "locationEn": "USA (Arizona) / Mexico (Sonora)",
+    "sites": [
+      {
+        "lat": 31.3322,
+        "lon": -110.9378
+      },
+      {
+        "lat": 29.2972,
+        "lon": -110.3309
+      }
+    ]
+  },
+  {
+    "id": "ethnography-78",
+    "title": "《全球猎身》(Global Body Shopping)",
+    "year": 2007,
+    "author": "Biao Xiang（项飙）",
+    "publisher": "Princeton University Press",
+    "summary": "追踪印度IT劳动力通过中介在全球流通。\n\n南印度与澳大利亚多点田野调查。\n\n灵活的全球资本主义将印度IT工人纳入劳动调配机制；嫁妇、家庭网络与移民签证共同维系着新经济的弹性剥削结构。",
+    "location": "India (Hyderabad) / Australia",
+    "countryOrRegion": "India (Hyderabad) / Australia",
+    "lat": 17.385,
+    "lon": 78.4867,
+    "sourceField": "印度·海得拉巴 / 澳大利亚",
+    "locationEn": "India·Hyderabad / Australia",
+    "sites": [
+      {
+        "lat": 17.385,
+        "lon": 78.4867
+      },
+      {
+        "lat": -33.8688,
+        "lon": 151.2093
+      }
+    ]
   },
   {
     "id": "ethnography-39",
@@ -581,7 +667,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-40",
-    "title": "《中国女工》(Made in China)",
+    "title": "《中国女工》（Made in China）",
     "year": 2005,
     "author": "Pun Ngai（潘毅）",
     "publisher": "Duke University Press",
@@ -609,7 +695,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-42",
-    "title": "《跨越边界的社区》(Transcending Boundaries)",
+    "title": "《跨越边界的社区》（Transcending Boundaries）",
     "year": 2005,
     "author": "Biao Xiang（项飙）",
     "publisher": "Brill",
@@ -623,7 +709,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-43",
-    "title": "《治理教育欲望》(Governing Educational Desire)",
+    "title": "《治理教育欲望》（Governing Educational Desire）",
     "year": 2011,
     "author": "Andrew Kipnis（任柯安）",
     "publisher": "University of Chicago Press",
@@ -637,7 +723,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-44",
-    "title": "《信用的宇宙论》(Cosmologies of Credit)",
+    "title": "《信用的宇宙论》（Cosmologies of Credit）",
     "year": 2010,
     "author": "Julie Y. Chu（朱苑瑜）",
     "publisher": "Duke University Press",
@@ -651,7 +737,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-45",
-    "title": "《异质的世界化》(Other-Worldly)",
+    "title": "《异质的世界化》（Other-Worldly）",
     "year": 2009,
     "author": "Mei Zhan（詹梅）",
     "publisher": "Duke University Press",
@@ -675,7 +761,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-46",
-    "title": "《不确定的爱》(Love's Uncertainty)",
+    "title": "《不确定的爱》（Love's Uncertainty）",
     "year": 2015,
     "author": "Teresa Kuan（关宜馨）",
     "publisher": "University of California Press",
@@ -689,7 +775,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-47",
-    "title": "《当代中国农村的卫生、社会性和文化》(Hygiene, Sociality, and Culture in Contemporary Rural China)",
+    "title": "《当代中国农村的卫生、社会性和文化》（Hygiene, Sociality, and Culture in Contemporary Rural China）",
     "year": 2016,
     "author": "Lili Lai（赖立里）",
     "publisher": "Amsterdam University Press",
@@ -731,9 +817,9 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-51",
-    "title": "《日本的抑郁症》(Depression in Japan)",
+    "title": "《日本的抑郁症》（Depression in Japan）",
     "year": 2012,
-    "author": "Junko Kitanaka",
+    "author": "Junko Kitanaka（北中淳子）",
     "publisher": "Princeton University Press",
     "summary": "日本职场文化与精神病学话语如何共同将抑郁症建构为一种社会性苦难，进而引发大规模诊断与用药热潮。\n\n精神科诊所与职场田野调查结合精神病学史与药物推广档案分析。\n\n抑郁症在日本的流行不仅是医学事件，更是社会危机的症候；精神病学的扩张重塑了日本人对工作、苦难与自我的理解。",
     "location": "Tokyo",
@@ -759,7 +845,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-53",
-    "title": "《治愈劳动》(Healing Labor)",
+    "title": "《治愈劳动》（Healing Labor）",
     "year": 2020,
     "author": "Gabriele Koch",
     "publisher": "Stanford University Press",
@@ -773,7 +859,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-54",
-    "title": "《千禧年的怪物》(Millennial Monsters)",
+    "title": "《千禧年的怪物》（Millennial Monsters）",
     "year": 2006,
     "author": "Anne Allison",
     "publisher": "University of California Press",
@@ -787,7 +873,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-55",
-    "title": "《亲密的分离》(Intimate Disconnections)",
+    "title": "《亲密的分离》（Intimate Disconnections）",
     "year": 2020,
     "author": "Allison Alexy",
     "publisher": "University of Chicago Press",
@@ -829,7 +915,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-58",
-    "title": "《为爱而行》(On the Move for Love)",
+    "title": "《为爱而行》（On the Move for Love）",
     "year": 2010,
     "author": "Sealing Cheng（鄭詩靈）",
     "publisher": "University of Pennsylvania Press",
@@ -885,11 +971,11 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-62",
-    "title": "《我的凉山兄弟》(Passage to Manhood)",
+    "title": "《我的凉山兄弟》（Passage to Manhood）",
     "year": 2011,
     "author": "Shao-hua Liu（劉紹華）",
     "publisher": "Stanford University Press",
-    "summary": "凉山彝族（诺苏）青年男性如何在改革开放后的流动与城乡落差中，陷入海洛因成瘾与艾滋病的双重困境。\n\n凉山彝族社区长期田野调查，追踪青年迁徙轨迹与吸毒网络。\n\n成瘾不是道德失败，而是现代化进程中少数民族青年被边缘化的结构性后果；国家防艾项目未能触及成瘾的社会根源。",
+    "summary": "凉山彝族（诺苏）青年男性如何在改革开放后的流动与城乡落差中，陷入海洛因成瘾与艾滋病的双重困境。\n\n凉山彝族社区长期田野调查，追踪青年迁徙轨迹与吸毒网络。\n\n成瘾不是道德失败，而是现代化进程中少数民族青年被边缘化的结构性后果；防艾项目未能触及成瘾的社会根源。",
     "location": "Sichuan, Liangshan Yi (Nuosu) Territory",
     "countryOrRegion": "China",
     "lat": 27.8945,
@@ -940,20 +1026,6 @@ window.ETHNOGRAPHY_BOOKS = [
     "locationEn": "Papua New Guinea·Ok Tedi Mining Area (Melanesia)"
   },
   {
-    "id": "ethnography-68",
-    "title": "《在全球的边缘》(On the Edge of the Global)",
-    "year": 2011,
-    "author": "Niko Besnier",
-    "publisher": "Stanford University Press",
-    "summary": "汤加人在全球化、移民压力与本土身份认同之间产生的现代性焦虑与道德危机感。\n\n汤加群岛多社区田野调查，结合海外侨民网络与媒体研究。\n\n太平洋岛民并非全球化的被动接受者，而是在移动与根植之间艰难维持主体性的现代主体；焦虑本身是结构性的。",
-    "location": "Tongan Islands (Polynesia)",
-    "countryOrRegion": "Tonga",
-    "lat": -21.18,
-    "lon": -175.2,
-    "sourceField": "汤加·汤加群岛",
-    "locationEn": "Tonga·Tongan Islands (Polynesia)"
-  },
-  {
     "id": "ethnography-69",
     "title": "《金矿上的利维坦》(Leviathans at the Gold Mine)",
     "year": 2014,
@@ -969,7 +1041,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-70",
-    "title": "《礼物的性别》(The Gender of the Gift)",
+    "title": "《礼物的性别》（The Gender of the Gift）",
     "year": 1988,
     "author": "Marilyn Strathern",
     "publisher": "University of California Press",
@@ -983,7 +1055,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-71",
-    "title": "《廉价的肉》(Cheap Meat)",
+    "title": "《廉价的肉》（Cheap Meat）",
     "year": 2010,
     "author": "D. Gewertz & F. Errington",
     "publisher": "University of California Press",
@@ -993,7 +1065,35 @@ window.ETHNOGRAPHY_BOOKS = [
     "lat": -21.18,
     "lon": -175.2,
     "sourceField": "太平洋岛国·巴布亚新几内亚 / 斐济 / 汤加",
-    "locationEn": "Pacific Island Nations·Papua New Guinea / Fiji / Tonga"
+    "locationEn": "Pacific Island Nations·Papua New Guinea / Fiji / Tonga",
+    "sites": [
+      {
+        "lat": -9.4438,
+        "lon": 147.1803
+      },
+      {
+        "lat": -18.1248,
+        "lon": 178.4501
+      },
+      {
+        "lat": -21.18,
+        "lon": -175.2
+      }
+    ]
+  },
+  {
+    "id": "ethnography-13",
+    "title": "《在棕榈树的阴影下》(In the Shadow of the Palms)",
+    "year": 2022,
+    "author": "Sophie Chao",
+    "publisher": "Duke University Press",
+    "summary": "油棕种植园扩张对印尼西巴布亚马林德人多物种世界的系统性摧毁。\n\n社区民族志与多物种田野考察。\n\n工业农业造成存在性灾难：不仅是生态危机，更是本体论意义上的世界终结与哀悼。",
+    "location": "West Papua, Maro River Region",
+    "countryOrRegion": "Indonesia",
+    "lat": -8.49,
+    "lon": 140.39,
+    "sourceField": "印尼·西巴布亚 莫劳河区域",
+    "locationEn": "Indonesia·West Papua, Maro River Region"
   },
   {
     "id": "ethnography-72",
@@ -1010,20 +1110,6 @@ window.ETHNOGRAPHY_BOOKS = [
     "locationEn": "Russia / Soviet Union·Leningrad / Moscow"
   },
   {
-    "id": "ethnography-73",
-    "title": "《梦境攸关》(Dreams that Matter)",
-    "year": 2011,
-    "author": "Amira Mittermaier",
-    "publisher": "University of California Press",
-    "summary": "开罗穆斯林的梦境实践：梦被理解为真主的传达，并被积极诠释、分享与付诸行动，构成一种独特的伊斯兰想象地理与日常宗教伦理。\n\n开罗多处清真寺、苏菲道堂与梦境诠释圈子的长期参与观察，结合梦境叙事的话语分析与伊斯兰梦境诠释传统文献研究。\n\n梦境不是心理学意义上的潜意识，而是嵌入神圣知识论的宗教认识论实践；通过梦境研究，挑战了世俗现代性关于主体性与想象力的标准假设。",
-    "location": "Cairo",
-    "countryOrRegion": "Egypt",
-    "lat": 30.0444,
-    "lon": 31.2357,
-    "sourceField": "埃及·开罗",
-    "locationEn": "Egypt·Cairo"
-  },
-  {
     "id": "ethnography-74",
     "title": "《道德新自由主义者》(The Moral Neoliberal)",
     "year": 2012,
@@ -1036,264 +1122,6 @@ window.ETHNOGRAPHY_BOOKS = [
     "lon": 9.19,
     "sourceField": "意大利·伦巴第大区（米兰周边）",
     "locationEn": "Italy·Lombardy (Greater Milan)"
-  },
-  {
-    "id": "ethnography-75",
-    "title": "《摩擦》(Friction)",
-    "year": 2004,
-    "author": "Anna Tsing（罗安清）",
-    "publisher": "Princeton University Press",
-    "summary": "追踪印度尼西亚加里曼丹热带雨林中，环保运动、伐木资本与国家权力在全球接触地带相互激烈碰撞的过程。\n\n多地点田野调查，结合对激进主义者、伐木工人、地方原住民社区及国际NGO的长期深度访谈与参与观察。\n\n\"全球化\"并非无摩擦的普遍流动，而是在差异与不均等相遇中被具体制造出来；摩擦既是破坏力量，也是变革的动能。",
-    "location": "Kalimantan (Borneo)",
-    "countryOrRegion": "Indonesia",
-    "lat": -0.7893,
-    "lon": 113.9213,
-    "sourceField": "印度尼西亚·加里曼丹（婆罗洲）",
-    "locationEn": "Indonesia·Kalimantan (Borneo)"
-  },
-  {
-    "id": "ethnography-76",
-    "title": "《曼谷的亲密经济》(The Intimate Economies of Bangkok)",
-    "year": 2004,
-    "author": "Ara Wilson",
-    "publisher": "University of California Press",
-    "summary": "曼谷的直销网络、购物中心文化与性别异质性（tom/dee关系）如何在跨国资本主义流通中共同重塑泰国的亲密关系与性别秩序。\n\n曼谷多场景田野调查，涵盖雅芳女销售员、性别多元社群与大型商场从业者的深度访谈及参与观察。\n\n\"亲密性\"是全球资本主义的核心经济逻辑而非其对立面；泰国的性别多元性既是商品化的对象，也是抵抗同质化的文化资源。",
-    "location": "Bangkok",
-    "countryOrRegion": "Thailand",
-    "lat": 13.7563,
-    "lon": 100.5018,
-    "sourceField": "泰国·曼谷",
-    "locationEn": "Thailand·Bangkok"
-  },
-  {
-    "id": "ethnography-77",
-    "title": "《日常转变》(Everyday Conversions)",
-    "year": 2017,
-    "author": "Attiya Ahmad",
-    "publisher": "Duke University Press",
-    "summary": "科威特家庭中南亚穆斯林女性佣工的宗教实践与日常照护关系，深度挑战了移民劳工研究中将其化约为受剥削受害者的刻板叙事。\n\n科威特雇主家庭的长期参与观察与南亚女性移工深度访谈，结合海湾国家移民政策与伊斯兰伦理话语分析。\n\n皈依与宗教实践不是被动顺从，而是移民女性在约束性处境中构建道德主体性、与灵性自我的主动策略。",
-    "location": "Kuwait City",
-    "countryOrRegion": "Kuwait",
-    "lat": 29.3759,
-    "lon": 47.9774,
-    "sourceField": "科威特·科威特城",
-    "locationEn": "Kuwait·Kuwait City"
-  },
-  {
-    "id": "ethnography-78",
-    "title": "《全球猎身》(Global Body Shopping)",
-    "year": 2007,
-    "author": "Biao Xiang（项飙）",
-    "publisher": "Princeton University Press",
-    "summary": "追踪印度IT劳动力通过中介在全球流通。\n\n南印度与澳大利亚多点田野调查。\n\n灵活的全球资本主义将印度IT工人纳入劳动调配机制；嫁妇、家庭网络与移民签证共同维系着新经济的弹性剥削结构。",
-    "location": "India (Hyderabad) / Australia",
-    "countryOrRegion": "India (Hyderabad) / Australia",
-    "lat": 17.385,
-    "lon": 78.4867,
-    "sourceField": "印度·海得拉巴 / 澳大利亚",
-    "locationEn": "India·Hyderabad / Australia",
-    "sites": [
-      {
-        "lat": 17.385,
-        "lon": 78.4867
-      },
-      {
-        "lat": -33.8688,
-        "lon": 151.2093
-      }
-    ]
-  },
-  {
-    "id": "ethnography-79",
-    "title": "《对未来的乡愁》(Nostalgia for the Future)",
-    "year": 2010,
-    "author": "Charles Piot",
-    "publisher": "University of Chicago Press",
-    "summary": "冷战终结后多哥社会中，五旬节基督教运动、美国移民签证彩票与NGO治理如何共同重塑了卡布雷人的主体性与时间想象，制造出一种对冷战援助时代的反向乡愁。  洛美城市田野调查与卡布雷农村社区对比研究，历时逾三十年长期追踪。  后冷战非洲的\"未来\"是对过去的怀旧性重构；全球化并未带来进步，而是制造了匮乏感与对另一种现代性的切身渴望。",
-    "location": "Lomé (& Rural Kabre Territory)",
-    "countryOrRegion": "Togo",
-    "lat": 6.1725,
-    "lon": 1.2314,
-    "sourceField": "多哥·洛美（及农村卡布雷族地区）",
-    "locationEn": "Togo·Lomé (& Rural Kabre Territory)"
-  },
-  {
-    "id": "ethnography-80",
-    "title": "《声音社会主义》(Sonic Socialism)",
-    "year": 2025,
-    "author": "Christina Schwenkel",
-    "publisher": "University of California Press",
-    "summary": "新冠疫情期间，越南河内的广播喇叭、即时通讯与公共卫生视频等声音技术如何成为社会主义国家动员民众、编织照护与管控的关键基础设施。\n\n以\"声音田野调查\"（soundwork）为核心的感官自传民族志，追踪2020年疫情第一年的隔离、封控与日常声音景观。\n\n声音治理将听觉实践转化为国家权力的延伸；社会主义照护伦理在声音空间中同时编织了连接与控制的双重网络。",
-    "location": "Hanoi",
-    "countryOrRegion": "Vietnam",
-    "lat": 21.0278,
-    "lon": 105.8342,
-    "sourceField": "越南·河内",
-    "locationEn": "Vietnam·Hanoi"
-  },
-  {
-    "id": "ethnography-81",
-    "title": "《战争机器》(The War Machines)",
-    "year": 2011,
-    "author": "Danny Hoffman",
-    "publisher": "Duke University Press",
-    "summary": "塞拉利昂与利比里亚年轻男性如何被整合进一套超越国界的战争机器，以劳动力的形式被资本、军阀与国际人道主义机构反复调度与丢弃。  战时军营与战后城市的长期田野调查，结合武装派系网络与援助机构运作的双线追踪。  西非战争的逻辑不是族群仇恨，而是一种去个体化的生命政治；年轻人在战争机器中既非施害者也非受害者，而是可被替换的劳动单元。",
-    "location": "Wartime Camps & Postwar Cities",
-    "countryOrRegion": "Sierra Leone / Liberia",
-    "lat": 8.484,
-    "lon": -13.2299,
-    "sourceField": "塞拉利昂/利比里亚·战时军营与战后城市",
-    "locationEn": "Sierra Leone / Liberia·Wartime Camps & Postwar Cities",
-    "sites": [
-      {
-        "lat": 8.484,
-        "lon": -13.2299
-      },
-      {
-        "lat": 6.3156,
-        "lon": -10.8074
-      }
-    ]
-  },
-  {
-    "id": "ethnography-82",
-    "title": "《当身体记忆时》(When Bodies Remember)",
-    "year": 2007,
-    "author": "Didier Fassin",
-    "publisher": "University of California Press",
-    "summary": "南非艾滋病危机中，种族隔离的历史创伤如何通过身体被铭刻并激活，塑造了南非政府与民众对HIV/AIDS的独特认知、政策回应与拒绝科学的逻辑。  约翰内斯堡及多省田野调查，结合种族隔离历史档案与公共卫生政策的跨学科分析。  身体是历史的记忆库；南非艾滋病否认主义的政治逻辑只有在种族隔离创伤、与后殖民主权焦虑的双重背景下才可理解。",
-    "location": "Johannesburg (& Eastern Cape / KwaZulu-Natal)",
-    "countryOrRegion": "South Africa",
-    "lat": -26.2041,
-    "lon": 28.0473,
-    "sourceField": "南非·约翰内斯堡（及东开普 / 夸祖鲁-纳塔尔省）",
-    "locationEn": "South Africa·Johannesburg (& Eastern Cape / KwaZulu-Natal)"
-  },
-  {
-    "id": "ethnography-83",
-    "title": "《维持秩序》(Enforcing Order)",
-    "year": 2013,
-    "author": "Didier Fassin",
-    "publisher": "Polity Press",
-    "summary": "法国巴黎郊区警察日常执法实践的民族志：警察的种族化凝视、即兴暴力与对移民青年的系统性羞辱如何构成国家权力的微观运作机制。 随反巡逻队进行长期深度参与式田野调查，记录执法现场的即时决策与身体对抗。  执法行为不是法律的中性执行，而是种族化权威的日常再生产；警察的身体实践将阶级与族裔不平等铭刻于城市空间，揭示法治话语背后的道德双重标准。",
-    "location": "Paris Banlieues",
-    "countryOrRegion": "France",
-    "lat": 48.901,
-    "lon": 2.45,
-    "sourceField": "法国·巴黎郊区（班利厄）",
-    "locationEn": "France·Paris Banlieues"
-  },
-  {
-    "id": "ethnography-84",
-    "title": "《金沙萨》(Kinshasa)",
-    "year": 2004,
-    "author": "Filip De Boeck & Marie-Françoise Plissart",
-    "publisher": "Ludion",
-    "summary": "金沙萨日常生活的时间层叠、宗教想象与城市空间的不可见性：这座拒绝被西方城市理论化约的非洲大都市如何在国家失序中生产出另类的都市性。  金沙萨多地长期民族志田野调查，结合黑白摄影、儿童绘画与城市建筑的视觉民族志分析。  金沙萨的\"不可见\"城市性与\"第二世界\"宗教想象共同构成了一种另类都市现代性，开创了视觉民族志与城市理论跨界的写作范式。",
-    "location": "Kinshasa",
-    "countryOrRegion": "DRC",
-    "lat": -4.4419,
-    "lon": 15.2663,
-    "sourceField": "刚果民主共和国·金沙萨",
-    "locationEn": "DRC·Kinshasa"
-  },
-  {
-    "id": "ethnography-85",
-    "title": "《边际收益》(Marginal Gains)",
-    "year": 2004,
-    "author": "Jane I. Guyer",
-    "publisher": "University of Chicago Press",
-    "summary": "穿越数百年大西洋贸易史，分析尼日利亚货币交易实践中的\"边际收益\"逻辑：非洲经济行动者如何在多重货币与时间框架中，维持交换的开放性与创造力。  跨越历史档案与当代约鲁巴经济实践的多尺度民族志与比较分析。  非洲经济不是市场经济的残缺版本，而是一套以\"边际\"而非\"积累\"为核心的独特时间性逻辑；货币多元性是大西洋非洲应对不确定性的生存智慧。",
-    "location": "Yoruba / Benin City (Atlantic Africa)",
-    "countryOrRegion": "Nigeria",
-    "lat": 6.335,
-    "lon": 5.6037,
-    "sourceField": "尼日利亚·约鲁巴 / 贝宁城（大西洋非洲）",
-    "locationEn": "Nigeria·Yoruba / Benin City (Atlantic Africa)"
-  },
-  {
-    "id": "ethnography-86",
-    "title": "《敞坟之地》(The Land of Open Graves)",
-    "year": 2015,
-    "author": "Jason De Léon",
-    "publisher": "University of California Press",
-    "summary": "以政策民族志与考古学、取证方法结合，揭示美国的边境政策如何将索诺拉沙漠变为无证移民的坟场。\n\n多年跟踪田野结合幸存者访谈与对遗留物品的物质分析。\n\n美国边境政策将死亡转嫁给沙漠和非人类行动者，掩盖了边境政策的系统性暴力。",
-    "location": "Mexico (Sonora)",
-    "countryOrRegion": "USA (Arizona)",
-    "lat": 31.3322,
-    "lon": -110.9378,
-    "sourceField": "美国（亚利桑那州） / 墨西哥（索诺拉州）",
-    "locationEn": "USA (Arizona) / Mexico (Sonora)"
-  },
-  {
-    "id": "ethnography-87",
-    "title": "《革命之后》(After the Revolution)",
-    "year": 2014,
-    "author": "Jessica Greenberg",
-    "publisher": "Cornell University Press",
-    "summary": "后米洛舍维奇时代，塞尔维亚学生运动如何在\"公民社会\"话语的包裹下，将政治激情转化为NGO化的温顺参与形式。  贝尔格莱德学生组织与青年活动人士的长期田野调查，结合公民教育材料与国际民主援助话语分析。  \"公民社会\"不是中立政治空间，塞尔维亚青年的政治想象在被规范化的过程中，也在夹缝中生长出本土的批判主体性。",
-    "location": "Belgrade",
-    "countryOrRegion": "Serbia",
-    "lat": 44.7866,
-    "lon": 20.4489,
-    "sourceField": "塞尔维亚·贝尔格莱德",
-    "locationEn": "Serbia·Belgrade"
-  },
-  {
-    "id": "ethnography-88",
-    "title": "《创意的考量》(Creative Reckonings)",
-    "year": 2006,
-    "author": "Jessica Winegar",
-    "publisher": "Stanford University Press",
-    "summary": "开罗艺术家如何在国家文化机构、伊斯兰主义批评与西方艺术市场三重压力下，协商\"现代埃及艺术\"的意义、价值与合法性。\n\n开罗艺术院校、画廊、艺术家工作室与展览空间的长期参与田野调查，结合文化政策文本与媒体话语分析。\n\n\"当代艺术\"的全球化话语在埃及本土遭遇特定的伊斯兰与国家话语压力，艺术实践揭示了后殖民社会文化政治的内在张力。",
-    "location": "Cairo",
-    "countryOrRegion": "Egypt",
-    "lat": 30.0444,
-    "lon": 31.2357,
-    "sourceField": "埃及·开罗",
-    "locationEn": "Egypt·Cairo"
-  },
-  {
-    "id": "ethnography-89",
-    "title": "《流动性的焦虑》(The Anxieties of Mobility)",
-    "year": 2009,
-    "author": "Johan Lindquist",
-    "publisher": "University of Minnesota Press",
-    "summary": "新加坡对岸的印尼边境岛屿巴淡，如何在全球劳工迁移、性旅游与国家经济特区政策的交汇处成为一个充满情感张力与社会失序的\"焦虑空间\"。\n\n巴淡岛移民工人、性工作者、劳工中介与政府官员的多群体长期参与观察与深度访谈。\n\n全球化的流动性不是解放，而是制造了新型情感脆弱性；焦虑作为一种情动状态，揭示了移动劳动者在边境资本主义中被悬置的存在困境。",
-    "location": "Batam (Riau Islands)",
-    "countryOrRegion": "Indonesia",
-    "lat": 1.1301,
-    "lon": 104.0529,
-    "sourceField": "印度尼西亚·巴淡岛（廖内群岛）",
-    "locationEn": "Indonesia·Batam (Riau Islands)"
-  },
-  {
-    "id": "ethnography-90",
-    "title": "《剃光野兽》(Shaving the Beasts)",
-    "year": 2020,
-    "author": "John Hartigan Jr.",
-    "publisher": "University of Minnesota Press",
-    "summary": "西班牙加利西亚每年一度的\"rapa das bestas\"仪式中，野马被围捕剃毛的过程如何揭示其复杂的社会生活、情感联结与创伤后恢复力。  驻扎山地对马群进行跟踪参与观察，并记录54张黑白照片。  马匹并非仪式的被动客体，而是具有主体性的社会行动者；这部民族志开创了以非人类为主角的写作范式。",
-    "location": "Galicia (Sabucedo Village)",
-    "countryOrRegion": "Spain",
-    "lat": 42.55,
-    "lon": -8.42,
-    "sourceField": "西班牙·加利西亚（萨布塞多村）",
-    "locationEn": "Spain·Galicia (Sabucedo Village)"
-  },
-  {
-    "id": "ethnography-91",
-    "title": "《多元主义的清算》(The Reckoning of Pluralism)",
-    "year": 2014,
-    "author": "Kabir Tambar",
-    "publisher": "Stanford University Press",
-    "summary": "土耳其阿列维人如何在世俗民族主义国家的多元主义话语、与伊斯兰主义政治之间，协商本族群的宗教差异与公共承认。  伊斯坦布尔及安纳托利亚多处阿列维社区田野调查，结合话语历史与伊斯兰教法档案分析。  世俗多元主义并不中立；国家对少数宗教群体的\"承认\"以规范化为代价，将差异纳入管控框架，而非真正容纳他异性。",
-    "location": "Istanbul (& Anatolian Alevi Communities)",
-    "countryOrRegion": "Turkey",
-    "lat": 41.0082,
-    "lon": 28.9784,
-    "sourceField": "土耳其·伊斯坦布尔（及安纳托利亚阿列维社区）",
-    "locationEn": "Turkey·Istanbul (& Anatolian Alevi Communities)"
   },
   {
     "id": "ethnography-92",
@@ -1310,88 +1138,18 @@ window.ETHNOGRAPHY_BOOKS = [
     "locationEn": "Romania·Transylvania (Aurel Vlaicu Village)"
   },
   {
-    "id": "ethnography-93",
-    "title": "《附魅的现代》(An Enchanted Modern)",
-    "year": 2006,
-    "author": "Lara Deeb",
-    "publisher": "Princeton University Press",
-    "summary": "贝鲁特南郊什叶派穆斯林女性如何将公开虔诚实践与对现代性的渴望融合，形成独特的\"迷醉现代\"主体性——既非世俗自由主义，也非保守传统主义。  达希亚区女性宗教活动、纪念仪式与日常生活的长期民族志调查。  现代性与宗教虔诚并非天然对立；什叶派女性通过公开表演的虔诚，在伊斯兰框架内争取主体性，有力挑战了西方女性主义对能动性的狭隘预设。",
-    "location": "Beirut, Southern Suburbs (Dahiyya)",
-    "countryOrRegion": "Lebanon",
-    "lat": 33.85,
-    "lon": 35.52,
-    "sourceField": "黎巴嫩·贝鲁特南郊（达希亚区）",
-    "locationEn": "Lebanon·Beirut, Southern Suburbs (Dahiyya)"
-  },
-  {
-    "id": "ethnography-94",
-    "title": "《边缘视野》(Peripheral Visions)",
-    "year": 2008,
-    "author": "Lisa Wedeen",
-    "publisher": "University of Chicago Press",
-    "summary": "统一后的也门如何在嚼卡特（qat）聚会、媒体话语表演与部落政治的交织中，建构出脆弱而真实的民族国家想象与公民认同。\n\n萨那与哈德拉毛的多地点长期田野调查，结合媒体话语分析与公共政治表演的细密观察。\n\n\"也门人\"的身份认同是表演性建构而非历史给定；边缘性使也门成为审视现代国家、民族主义与公共空间理论的独特棱镜。",
-    "location": "Sanaa / Hadramawt",
-    "countryOrRegion": "Yemen",
-    "lat": 15.3694,
-    "lon": 44.191,
-    "sourceField": "也门·萨那 / 哈德拉毛",
-    "locationEn": "Yemen·Sanaa / Hadramawt"
-  },
-  {
-    "id": "ethnography-95",
-    "title": "《边境工作》(Border Work)",
-    "year": 2014,
-    "author": "Madeline Reeves",
-    "publisher": "Cornell University Press",
-    "summary": "中亚三国交界费尔干纳盆地山地社区中，苏联划定的边境线如何在日常生活中被体验、逾越与重塑，使抽象的国家主权成为具身的空间实践。\n\n边境村落长期驻点田野调查，结合苏联领土划分档案研究与边境管控现场的参与观察。\n\n后苏联领土政治将原本流通的生活世界割裂争议边界，通过边境居民的行走路线、身份证件与跨境日常生活积累而被具身化。",
-    "location": "Kyrgyz-Tajik-Uzbek borderlands",
-    "countryOrRegion": "Central Asia",
-    "lat": 40.5,
-    "lon": 71.0,
-    "sourceField": "中亚·吉尔吉斯 / 塔吉克 / 乌兹别克三国边界区域",
-    "locationEn": "Central Asia·Kyrgyz-Tajik-Uzbek borderlands"
-  },
-  {
-    "id": "ethnography-96",
-    "title": "《石油时代》(In the Time of Oil)",
-    "year": 2010,
-    "author": "Mandana Limbert",
-    "publisher": "Cornell University Press",
-    "summary": "阿曼内陆绿洲古城居民如何在石油繁荣与文化遗产保护的双重话语下体验时间：既向往发展，又渴望保存\"前石油时代\"的本真性。  巴赫拉小镇长期田野调查，结合阿曼国家现代化政策文本与伊斯兰时间观分析。  石油现代化制造了特定的时间性悖论：过去被理想化为本真，当下被体验为过渡，未来则充满不确定；发展叙事与伊斯兰虔诚、本土记忆的张力共同构成了海湾国家现代性的独特质地。",
-    "location": "Bahla (Interior Oasis Town)",
-    "countryOrRegion": "Oman",
-    "lat": 22.967,
-    "lon": 57.299,
-    "sourceField": "阿曼·巴赫拉（内陆绿洲古城）",
-    "locationEn": "Oman·Bahla (Interior Oasis Town)"
-  },
-  {
-    "id": "ethnography-97",
-    "title": "《事物之下》(The Underneath of Things)",
-    "year": 2001,
-    "author": "Mariane C. Ferme",
-    "publisher": "University of California Press",
-    "summary": "塞拉利昂门德族社会中，秘密、物质性与历史暴力如何在日常物品与身体实践中被编码、传递并长期隐伏。  博地区门德族社区长期参与田野调查，结合内战前后的物质文化与秘密结社仪式分析。  理解非洲暴力需穿透其表层，深入物质和仪式之下的知识传递逻辑。",
-    "location": "Bo District (Mende People)",
-    "countryOrRegion": "Sierra Leone",
-    "lat": 7.956,
-    "lon": -11.74,
-    "sourceField": "塞拉利昂·博地区（门德族）",
-    "locationEn": "Sierra Leone·Bo District (Mende People)"
-  },
-  {
-    "id": "ethnography-98",
-    "title": "《乌兹别克斯坦的新女性》(The New Woman in Uzbekistan)",
-    "year": 2006,
-    "author": "Marianne Kamp",
-    "publisher": "University of Washington Press",
-    "summary": "苏联在乌兹别克斯坦推行去面纱运动（hujum）的历史：国家如何将穆斯林女性身体作为现代化改造的战场，以及女性如何以多元方式主动回应这一强制性冲击。\n\n结合苏联国家档案、党政文件与当地女性深度口述史访谈的历史民族志研究，辅以当代费尔干纳社区田野调查。\n\n乌兹别克女性在苏联现代化进程中，同时是被塑造者与具有主动性的历史行动者，去面纱运动并不必然带来解放。",
-    "location": "Fergana Valley",
-    "countryOrRegion": "Uzbekistan",
-    "lat": 40.3864,
-    "lon": 71.7864,
-    "sourceField": "乌兹别克斯坦·费尔干纳盆地",
-    "locationEn": "Uzbekistan·Fergana Valley"
+    "id": "ethnography-83",
+    "title": "《维持秩序》(Enforcing Order)",
+    "year": 2013,
+    "author": "Didier Fassin",
+    "publisher": "Polity Press",
+    "summary": "法国巴黎郊区警察日常执法实践的民族志：警察的种族化凝视、即兴暴力与对移民青年的系统性羞辱如何构成国家权力的微观运作机制。 随反巡逻队进行长期深度参与式田野调查，记录执法现场的即时决策与身体对抗。  执法行为不是法律的中性执行，而是种族化权威的日常再生产；警察的身体实践将阶级与族裔不平等铭刻于城市空间，揭示法治话语背后的道德双重标准。",
+    "location": "Paris Banlieues",
+    "countryOrRegion": "France",
+    "lat": 48.901,
+    "lon": 2.45,
+    "sourceField": "法国·巴黎郊区（班利厄）",
+    "locationEn": "France·Paris Banlieues"
   },
   {
     "id": "ethnography-99",
@@ -1408,88 +1166,116 @@ window.ETHNOGRAPHY_BOOKS = [
     "locationEn": "Italy·Rome (Monti Historic Quarter)"
   },
   {
-    "id": "ethnography-100",
-    "title": "《伊斯兰现代性》(Islamic Modern)",
-    "year": 2002,
-    "author": "Michael Peletz",
+    "id": "ethnography-107",
+    "title": "《驯鹿人》(The Reindeer People)",
+    "year": 2005,
+    "author": "Piers Vitebsky",
+    "publisher": "Houghton Mifflin Harcourt",
+    "summary": "西伯利亚埃文驯鹿牧民在苏联解体后的生存危机、萨满信仰复兴与人鹿关系的伦理重建。  随埃文人共同游牧多年的深度参与田野调查，结合苏联档案与口述史研究。  人与驯鹿通过日常照料与梦境建立灵性纽带；后苏联社会断裂被萨满宇宙观重新缝合，呈现出迥异于西方现代性的人与非人关系模式。",
+    "location": "Siberia, Eveny (Evenki) Territory",
+    "countryOrRegion": "Russia",
+    "lat": 65.0,
+    "lon": 145.0,
+    "sourceField": "俄罗斯·西伯利亚 埃文基地区",
+    "locationEn": "Russia·Siberia, Eveny (Evenki) Territory"
+  },
+  {
+    "id": "ethnography-112",
+    "title": "《等待中的渴望》(Yearnings in the Meantime)",
+    "year": 2015,
+    "author": "Stef Jansen",
+    "publisher": "Berghahn Books",
+    "summary": "萨拉热窝普通市民在战后漫长等待中对\"正常生活\"的渴望、对欧洲未来的向往，以及这种集体期盼本身如何成为后冲突国际治理的对象。  萨拉热窝公寓街区长期田野调查，结合公共话语与欧盟政策文本分析。  后冲突社会中对正常性的期待既是生存策略，也是国际干预机构借以延迟结构性问责的情感资源。",
+    "location": "Sarajevo",
+    "countryOrRegion": "Bosnia-Herzegovina",
+    "lat": 43.8563,
+    "lon": 18.4131,
+    "sourceField": "波斯尼亚·萨拉热窝",
+    "locationEn": "Bosnia-Herzegovina·Sarajevo"
+  },
+  {
+    "id": "ethnography-87",
+    "title": "《革命之后》(After the Revolution)",
+    "year": 2014,
+    "author": "Jessica Greenberg",
+    "publisher": "Cornell University Press",
+    "summary": "后米洛舍维奇时代，塞尔维亚学生运动如何在\"公民社会\"话语的包裹下，将政治激情转化为NGO化的温顺参与形式。  贝尔格莱德学生组织与青年活动人士的长期田野调查，结合公民教育材料与国际民主援助话语分析。  \"公民社会\"不是中立政治空间，塞尔维亚青年的政治想象在被规范化的过程中，也在夹缝中生长出本土的批判主体性。",
+    "location": "Belgrade",
+    "countryOrRegion": "Serbia",
+    "lat": 44.7866,
+    "lon": 20.4489,
+    "sourceField": "塞尔维亚·贝尔格莱德",
+    "locationEn": "Serbia·Belgrade"
+  },
+  {
+    "id": "ethnography-90",
+    "title": "《剃光野兽》(Shaving the Beasts)",
+    "year": 2020,
+    "author": "John Hartigan Jr.",
+    "publisher": "University of Minnesota Press",
+    "summary": "西班牙加利西亚每年一度的\"rapa das bestas\"仪式中，野马被围捕剃毛的过程如何揭示其复杂的社会生活、情感联结与创伤后恢复力。  驻扎山地对马群进行跟踪参与观察，并记录54张黑白照片。  马匹并非仪式的被动客体，而是具有主体性的社会行动者；这部民族志开创了以非人类为主角的写作范式。",
+    "location": "Galicia (Sabucedo Village)",
+    "countryOrRegion": "Spain",
+    "lat": 42.55,
+    "lon": -8.42,
+    "sourceField": "西班牙·加利西亚（萨布塞多村）",
+    "locationEn": "Spain·Galicia (Sabucedo Village)"
+  },
+  {
+    "id": "ethnography-93",
+    "title": "《附魅的现代》(An Enchanted Modern)",
+    "year": 2006,
+    "author": "Lara Deeb",
     "publisher": "Princeton University Press",
-    "summary": "马来西亚伊斯兰宗教法庭的日常运作如何在穆斯林身份、性别秩序与国家权力之间共同建构出一种特殊的\"伊斯兰现代性\"。\n\n霹雳州宗教法庭长期参与观察，结合法庭记录档案与法官、当事人的深度访谈。\n\n伊斯兰现代性并非传统的简单延续或西方现代性的他者，而是在法律实践与政治竞争中被主动建构的混合产物。",
-    "location": "Perak / Negeri Sembilan",
-    "countryOrRegion": "Malaysia",
-    "lat": 4.5975,
-    "lon": 101.0901,
-    "sourceField": "马来西亚·霹雳州 / 森美兰州",
-    "locationEn": "Malaysia·Perak / Negeri Sembilan"
+    "summary": "贝鲁特南郊什叶派穆斯林女性如何将公开虔诚实践与对现代性的渴望融合，形成独特的\"迷醉现代\"主体性——既非世俗自由主义，也非保守传统主义。  达希亚区女性宗教活动、纪念仪式与日常生活的长期民族志调查。  现代性与宗教虔诚并非天然对立；什叶派女性通过公开表演的虔诚，在伊斯兰框架内争取主体性，有力挑战了西方女性主义对能动性的狭隘预设。",
+    "location": "Beirut, Southern Suburbs (Dahiyya)",
+    "countryOrRegion": "Lebanon",
+    "lat": 33.85,
+    "lon": 35.52,
+    "sourceField": "黎巴嫩·贝鲁特南郊（达希亚区）",
+    "locationEn": "Lebanon·Beirut, Southern Suburbs (Dahiyya)"
   },
   {
-    "id": "ethnography-101",
-    "title": "《地面上的事实》(Facts on the Ground)",
-    "year": 2001,
-    "author": "Nadia Abu El-Haj",
-    "publisher": "University of Chicago Press",
-    "summary": "以色列考古学实践如何通过挖掘、命名与展示，系统性地将巴勒斯坦地景改写为犹太历史主权的物质证据与国家正当性的科学基础。\n\n以色列考古遗址、博物馆与学术机构的田野调查，结合殖民档案、考古学建制史与科学实践的民族志分析。\n\n考古学不是对过去的中性发现，而是在地面上政治性地制造历史事实的实践；领土主权通过科学知识与物质改造共同生产。",
-    "location": "Israel / Palestine",
-    "countryOrRegion": "Israel / Palestine",
-    "lat": 31.77,
-    "lon": 35.21,
-    "sourceField": "以色列 / 巴勒斯坦",
-    "locationEn": "Israel / Palestine"
+    "id": "ethnography-116",
+    "title": "《虚构的空间》(The Make-Believe Space)",
+    "year": 2012,
+    "author": "Yael Navaro-Yashin",
+    "publisher": "Duke University Press",
+    "summary": "土耳其控制下的北塞浦路斯居民如何在法律上不被国际承认的\"虚构\"政治实体中生活，以及这种持续的不真实感如何渗透进日常情感与物质世界。  北塞浦路斯多地田野调查，结合废弃希腊裔财产的物质文化分析与情感民族志。  政治暴力的后果以废墟与遗留物品的形式持续散发影响；情感并非仅是主观感受，而是在政治遗留物的物质性中被生产出来的，推动了人类学对情感与物质的理论化。",
+    "location": "Cyprus (Northern/Turkish-Controlled Cyprus)",
+    "countryOrRegion": "Cyprus (Northern/Turkish-Controlled Cyprus)",
+    "lat": 35.1856,
+    "lon": 33.3823,
+    "sourceField": "塞浦路斯（北塞浦路斯 / 土耳其控制区）",
+    "locationEn": "Cyprus (Northern / Turkish-Controlled Cyprus)"
   },
   {
-    "id": "ethnography-102",
-    "title": "《巴扎政治》(Bazaar Politics)",
-    "year": 2011,
-    "author": "Noah Coburn",
+    "id": "ethnography-96",
+    "title": "《石油时代》(In the Time of Oil)",
+    "year": 2010,
+    "author": "Mandana Limbert",
+    "publisher": "Cornell University Press",
+    "summary": "阿曼内陆绿洲古城居民如何在石油繁荣与文化遗产保护的双重话语下体验时间：既向往发展，又渴望保存\"前石油时代\"的本真性。  巴赫拉小镇长期田野调查，结合阿曼国家现代化政策文本与伊斯兰时间观分析。  石油现代化制造了特定的时间性悖论：过去被理想化为本真，当下被体验为过渡，未来则充满不确定；发展叙事与伊斯兰虔诚、本土记忆的张力共同构成了海湾国家现代性的独特质地。",
+    "location": "Bahla (Interior Oasis Town)",
+    "countryOrRegion": "Oman",
+    "lat": 22.967,
+    "lon": 57.299,
+    "sourceField": "阿曼·巴赫拉（内陆绿洲古城）",
+    "locationEn": "Oman·Bahla (Interior Oasis Town)"
+  },
+  {
+    "id": "ethnography-91",
+    "title": "《多元主义的清算》(The Reckoning of Pluralism)",
+    "year": 2014,
+    "author": "Kabir Tambar",
     "publisher": "Stanford University Press",
-    "summary": "后塔利班时代阿富汗陶器之乡伊斯塔利夫的地方政治：部族长老、民主选举与国际援助项目如何在一个制陶小镇中相互角力，重塑社区权力格局。\n\n伊斯塔利夫社区长期田野调查，结合选举观察、陶器工匠工作坊参与与国际援助机构运作的双线追踪。\n\n阿富汗的\"民主建设\"在地方政治的具体质地中，显现为对既有权威关系的再包装而非根本性变革。",
-    "location": "Istalif (North of Kabul)",
-    "countryOrRegion": "Afghanistan",
-    "lat": 34.83,
-    "lon": 69.08,
-    "sourceField": "阿富汗·伊斯塔利夫（喀布尔以北）",
-    "locationEn": "Afghanistan·Istalif (North of Kabul)"
-  },
-  {
-    "id": "ethnography-103",
-    "title": "《无法治理的生命》(Ungovernable Life)",
-    "year": 2017,
-    "author": "Omar Dewachi",
-    "publisher": "Stanford University Press",
-    "summary": "伊拉克从萨达姆时代到美国占领后，医疗基础设施的系统性瓦解如何塑造了医生与患者的流亡轨迹，并制造出一种新型的生命政治困境。\n\n巴格达与贝鲁特医疗机构的田野调查，结合流亡医生的生命叙事、战争医学史档案与后殖民公共卫生文献的跨学科分析。\n\n战争创造了\"治理不能\"的生命地带；医疗的崩溃不是政策失败，而是主权暴力的系统性工程，将伊拉克医生与患者共同抛入无法被照护的存在困境。",
-    "location": "Baghdad / Lebanon - Beirut",
-    "countryOrRegion": "Iraq",
-    "lat": 33.3152,
-    "lon": 44.3661,
-    "sourceField": "伊拉克·巴格达 / 黎巴嫩·贝鲁特",
-    "locationEn": "Iraq·Baghdad / Lebanon·Beirut"
-  },
-  {
-    "id": "ethnography-104",
-    "title": "《激情的抗争》(Passionate Uprisings)",
-    "year": 2009,
-    "author": "Pardis Mahdavi",
-    "publisher": "Stanford University Press",
-    "summary": "德黑兰年轻一代穆斯林如何在伊斯兰共和国的道德管制下，通过派对、约会与身体实践悄然推进一场\"性革命\"，重构个人自由与宗教认同的边界。\n\n德黑兰中上层青年聚会场所与日常社交空间的长期参与观察，结合青年男女的深度访谈与身体实践的细密民族志记录。\n\n揭示了伊斯兰革命后，伊朗国家话语与个人欲望之间的持续张力，伊朗年轻人的身体实践是提出异议的方式。",
-    "location": "Tehran",
-    "countryOrRegion": "Iran",
-    "lat": 35.6892,
-    "lon": 51.389,
-    "sourceField": "伊朗·德黑兰",
-    "locationEn": "Iran·Tehran"
-  },
-  {
-    "id": "ethnography-105",
-    "title": "《阿尔及利亚在法国》(Algeria in France)",
-    "year": 2004,
-    "author": "Paul Silverstein",
-    "publisher": "Indiana University Press",
-    "summary": "法国阿尔及利亚移民社区如何在后殖民记忆、法国种族政治与伊斯兰-柏柏尔文化认同的交叉地带，构建超越单一民族国家框架的跨国主体性。\n\n巴黎郊区阿尔及利亚移民社区田野调查，结合阿尔及利亚柏柏尔（卡拜利）运动档案与法国多元文化政策的比较分析。\n\n\"跨政治\"（transpolitics）超越民族国家边界，在离散社区中生产出新型的族群认同与后殖民批判政治。",
-    "location": "Ile-de-France",
-    "countryOrRegion": "Algeria / France",
-    "lat": 48.8566,
-    "lon": 2.3522,
-    "sourceField": "阿尔及利亚/法国·巴黎大区",
-    "locationEn": "Algeria / France·Ile-de-France"
+    "summary": "土耳其阿列维人如何在世俗民族主义国家的多元主义话语、与伊斯兰主义政治之间，协商本族群的宗教差异与公共承认。  伊斯坦布尔及安纳托利亚多处阿列维社区田野调查，结合话语历史与伊斯兰教法档案分析。  世俗多元主义并不中立；国家对少数宗教群体的\"承认\"以规范化为代价，将差异纳入管控框架，而非真正容纳他异性。",
+    "location": "Istanbul (& Anatolian Alevi Communities)",
+    "countryOrRegion": "Turkey",
+    "lat": 41.0082,
+    "lon": 28.9784,
+    "sourceField": "土耳其·伊斯坦布尔（及安纳托利亚阿列维社区）",
+    "locationEn": "Turkey·Istanbul (& Anatolian Alevi Communities)"
   },
   {
     "id": "ethnography-106",
@@ -1516,18 +1302,84 @@ window.ETHNOGRAPHY_BOOKS = [
     ]
   },
   {
-    "id": "ethnography-107",
-    "title": "《驯鹿人》(The Reindeer People)",
-    "year": 2005,
-    "author": "Piers Vitebsky",
-    "publisher": "Houghton Mifflin Harcourt",
-    "summary": "西伯利亚埃文驯鹿牧民在苏联解体后的生存危机、萨满信仰复兴与人鹿关系的伦理重建。  随埃文人共同游牧多年的深度参与田野调查，结合苏联档案与口述史研究。  人与驯鹿通过日常照料与梦境建立灵性纽带；后苏联社会断裂被萨满宇宙观重新缝合，呈现出迥异于西方现代性的人与非人关系模式。",
-    "location": "Siberia, Eveny (Evenki) Territory",
-    "countryOrRegion": "Russia",
-    "lat": 65.0,
-    "lon": 145.0,
-    "sourceField": "俄罗斯·西伯利亚 埃文基地区",
-    "locationEn": "Russia·Siberia, Eveny (Evenki) Territory"
+    "id": "ethnography-110",
+    "title": "《政治灵性》(Political Spiritualities)",
+    "year": 2009,
+    "author": "Ruth Marshall",
+    "publisher": "University of Chicago Press",
+    "summary": "尼日利亚五旬节运动如何在国家失序与经济崩溃的缝隙中，建立起一套平行的道德秩序、身份体系与主权逻辑。  拉各斯与伊巴丹五旬节教会的长期参与田野调查，结合神学文本与政治史分析。  五旬节主义不是对现代性的逃离，而是在彻底重组自我的基础上，对政治主权与公民身份的宗教性夺取与再发明。",
+    "location": "Lagos / Ibadan",
+    "countryOrRegion": "Nigeria",
+    "lat": 6.5244,
+    "lon": 3.3792,
+    "sourceField": "尼日利亚·拉各斯 / 伊巴丹",
+    "locationEn": "Nigeria·Lagos / Ibadan"
+  },
+  {
+    "id": "ethnography-97",
+    "title": "《事物之下》(The Underneath of Things)",
+    "year": 2001,
+    "author": "Mariane C. Ferme",
+    "publisher": "University of California Press",
+    "summary": "塞拉利昂门德族社会中，秘密、物质性与历史暴力如何在日常物品与身体实践中被编码、传递并长期隐伏。  博地区门德族社区长期参与田野调查，结合内战前后的物质文化与秘密结社仪式分析。  理解非洲暴力需穿透其表层，深入物质和仪式之下的知识传递逻辑。",
+    "location": "Bo District (Mende People)",
+    "countryOrRegion": "Sierra Leone",
+    "lat": 7.956,
+    "lon": -11.74,
+    "sourceField": "塞拉利昂·博地区（门德族）",
+    "locationEn": "Sierra Leone·Bo District (Mende People)"
+  },
+  {
+    "id": "ethnography-81",
+    "title": "《战争机器》(The War Machines)",
+    "year": 2011,
+    "author": "Danny Hoffman",
+    "publisher": "Duke University Press",
+    "summary": "塞拉利昂与利比里亚年轻男性如何被整合进一套超越国界的战争机器，以劳动力的形式被资本、军阀与国际人道主义机构反复调度与丢弃。  战时军营与战后城市的长期田野调查，结合武装派系网络与援助机构运作的双线追踪。  西非战争的逻辑不是族群仇恨，而是一种去个体化的生命政治；年轻人在战争机器中既非施害者也非受害者，而是可被替换的劳动单元。",
+    "location": "Wartime Camps & Postwar Cities",
+    "countryOrRegion": "Sierra Leone / Liberia",
+    "lat": 8.484,
+    "lon": -13.2299,
+    "sourceField": "塞拉利昂/利比里亚·战时军营与战后城市",
+    "locationEn": "Sierra Leone / Liberia·Wartime Camps & Postwar Cities",
+    "sites": [
+      {
+        "lat": 8.484,
+        "lon": -13.2299
+      },
+      {
+        "lat": 6.3156,
+        "lon": -10.8074
+      }
+    ]
+  },
+  {
+    "id": "ethnography-84",
+    "title": "《金沙萨》(Kinshasa)",
+    "year": 2004,
+    "author": "Filip De Boeck & Marie-Françoise Plissart",
+    "publisher": "Ludion",
+    "summary": "金沙萨日常生活的时间层叠、宗教想象与城市空间的不可见性：这座拒绝被西方城市理论化约的非洲大都市如何在国家失序中生产出另类的都市性。  金沙萨多地长期民族志田野调查，结合黑白摄影、儿童绘画与城市建筑的视觉民族志分析。  金沙萨的\"不可见\"城市性与\"第二世界\"宗教想象共同构成了一种另类都市现代性，开创了视觉民族志与城市理论跨界的写作范式。",
+    "location": "Kinshasa",
+    "countryOrRegion": "DRC",
+    "lat": -4.4419,
+    "lon": 15.2663,
+    "sourceField": "刚果民主共和国·金沙萨",
+    "locationEn": "DRC·Kinshasa"
+  },
+  {
+    "id": "ethnography-79",
+    "title": "《对未来的乡愁》(Nostalgia for the Future)",
+    "year": 2010,
+    "author": "Charles Piot",
+    "publisher": "University of Chicago Press",
+    "summary": "冷战终结后多哥社会中，五旬节基督教运动、美国移民签证彩票与NGO治理如何共同重塑了卡布雷人的主体性与时间想象，制造出一种对冷战援助时代的反向乡愁。  洛美城市田野调查与卡布雷农村社区对比研究，历时逾三十年长期追踪。  后冷战非洲的\"未来\"是对过去的怀旧性重构；全球化并未带来进步，而是制造了匮乏感与对另一种现代性的切身渴望。",
+    "location": "Lomé (& Rural Kabre Territory)",
+    "countryOrRegion": "Togo",
+    "lat": 6.1725,
+    "lon": 1.2314,
+    "sourceField": "多哥·洛美（及农村卡布雷族地区）",
+    "locationEn": "Togo·Lomé (& Rural Kabre Territory)"
   },
   {
     "id": "ethnography-108",
@@ -1544,88 +1396,46 @@ window.ETHNOGRAPHY_BOOKS = [
     "locationEn": "Sierra Leone·Northern Province (Temne People)"
   },
   {
-    "id": "ethnography-109",
-    "title": "《战争灵魂》(Warring Souls)",
-    "year": 2006,
-    "author": "Roxanne Varzi",
-    "publisher": "Duke University Press",
-    "summary": "伊朗伊斯兰革命后，国家通过电影、电视与殉道话语对青年主体性的系统塑造，以及年轻一代在官方信仰与内心怀疑之间的深层撕裂。\n\n德黑兰电影制作机构与青年群体的参与田野调查，结合伊朗战争电影、国家媒体话语与青年日常生活叙事的综合文本分析。\n\n革命叙事通过美学与情动技术将殉道精神铭刻于身体；当代伊朗青年既是国家意识形态的产物，也是在其内部生长出异质欲望的裂缝主体。",
-    "location": "Tehran",
-    "countryOrRegion": "Iran",
-    "lat": 35.6892,
-    "lon": 51.389,
-    "sourceField": "伊朗·德黑兰",
-    "locationEn": "Iran·Tehran"
+    "id": "ethnography-82",
+    "title": "《当身体记忆时》(When Bodies Remember)",
+    "year": 2007,
+    "author": "Didier Fassin",
+    "publisher": "University of California Press",
+    "summary": "南非艾滋病危机中，种族隔离的历史创伤如何通过身体被铭刻并激活，塑造了南非政府与民众对HIV/AIDS的独特认知、政策回应与拒绝科学的逻辑。  约翰内斯堡及多省田野调查，结合种族隔离历史档案与公共卫生政策的跨学科分析。  身体是历史的记忆库；南非艾滋病否认主义的政治逻辑只有在种族隔离创伤、与后殖民主权焦虑的双重背景下才可理解。",
+    "location": "Johannesburg (& Eastern Cape / KwaZulu-Natal)",
+    "countryOrRegion": "South Africa",
+    "lat": -26.2041,
+    "lon": 28.0473,
+    "sourceField": "南非·约翰内斯堡（及东开普 / 夸祖鲁-纳塔尔省）",
+    "locationEn": "South Africa·Johannesburg (& Eastern Cape / KwaZulu-Natal)"
   },
   {
-    "id": "ethnography-110",
-    "title": "《政治灵性》(Political Spiritualities)",
-    "year": 2009,
-    "author": "Ruth Marshall",
-    "publisher": "University of Chicago Press",
-    "summary": "尼日利亚五旬节运动如何在国家失序与经济崩溃的缝隙中，建立起一套平行的道德秩序、身份体系与主权逻辑。  拉各斯与伊巴丹五旬节教会的长期参与田野调查，结合神学文本与政治史分析。  五旬节主义不是对现代性的逃离，而是在彻底重组自我的基础上，对政治主权与公民身份的宗教性夺取与再发明。",
-    "location": "Lagos / Ibadan",
-    "countryOrRegion": "Nigeria",
-    "lat": 6.5244,
-    "lon": 3.3792,
-    "sourceField": "尼日利亚·拉各斯 / 伊巴丹",
-    "locationEn": "Nigeria·Lagos / Ibadan"
+    "id": "ethnography-75",
+    "title": "《摩擦》(Friction)",
+    "year": 2004,
+    "author": "Anna Tsing（罗安清）",
+    "publisher": "Princeton University Press",
+    "summary": "追踪印度尼西亚加里曼丹热带雨林中，环保运动、伐木资本与国家权力在全球接触地带相互激烈碰撞的过程。\n\n多地点田野调查，结合对激进主义者、伐木工人、地方原住民社区及国际NGO的长期深度访谈与参与观察。\n\n\"全球化\"并非无摩擦的普遍流动，而是在差异与不均等相遇中被具体制造出来；摩擦既是破坏力量，也是变革的动能。",
+    "location": "Kalimantan (Borneo)",
+    "countryOrRegion": "Indonesia",
+    "lat": -0.7893,
+    "lon": 113.9213,
+    "sourceField": "印度尼西亚·加里曼丹（婆罗洲）",
+    "locationEn": "Indonesia·Kalimantan (Borneo)"
   },
   {
-    "id": "ethnography-111",
-    "title": "《废物围城》(Waste Siege)",
-    "year": 2019,
-    "author": "Sophia Stamatopoulou-Robbins",
-    "publisher": "Stanford University Press",
-    "summary": "巴勒斯坦西岸在以色列占领下，废物处理基础设施的慢性失能如何成为日常统治与生命政治的关键物质媒介。\n\n西岸多处社区、废物处理设施与国际援助机构的长期田野调查，结合技术治理文件与居民日常经验分析。\n\n废物不仅是污染，更是占领的物化形式；基础设施的系统性不运转揭示了被占领人群被系统性悬置的生存处境。",
-    "location": "West Bank",
-    "countryOrRegion": "Palestine",
-    "lat": 31.9466,
-    "lon": 35.3027,
-    "sourceField": "巴勒斯坦·西岸",
-    "locationEn": "Palestine·West Bank"
-  },
-  {
-    "id": "ethnography-112",
-    "title": "《等待中的渴望》(Yearnings in the Meantime)",
-    "year": 2015,
-    "author": "Stef Jansen",
-    "publisher": "Berghahn Books",
-    "summary": "萨拉热窝普通市民在战后漫长等待中对\"正常生活\"的渴望、对欧洲未来的向往，以及这种集体期盼本身如何成为后冲突国际治理的对象。  萨拉热窝公寓街区长期田野调查，结合公共话语与欧盟政策文本分析。  后冲突社会中对正常性的期待既是生存策略，也是国际干预机构借以延迟结构性问责的情感资源。",
-    "location": "Sarajevo",
-    "countryOrRegion": "Bosnia-Herzegovina",
-    "lat": 43.8563,
-    "lon": 18.4131,
-    "sourceField": "波斯尼亚·萨拉热窝",
-    "locationEn": "Bosnia-Herzegovina·Sarajevo"
-  },
-  {
-    "id": "ethnography-113",
-    "title": "《灵魂之结》(Knot of the Soul)",
-    "year": 2018,
-    "author": "Stefania Pandolfo",
-    "publisher": "University of Chicago Press",
-    "summary": "摩洛哥城市贫困青年同时遭受精神病学诊断与伊斯兰灵性治疗两套话语体系的拉锯，以及在这一张力中对自我、苦难与主体性的艰难重建。\n\n精神病院与传统治疗师（fqih）双线田野调查，结合精神分析理论文本、伊斯兰古典文献细读与患者深度叙事访谈。\n\n精神苦难是灵魂在历史暴力裂缝中寻找意义的挣扎；精神分析与伊斯兰话语在苦难主体的边界地带，形成难以调和却相互缠绕的知识角力。",
-    "location": "Casablanca / Rabat",
-    "countryOrRegion": "Morocco",
-    "lat": 33.5731,
-    "lon": -7.5898,
-    "sourceField": "摩洛哥·卡萨布兰卡 / 拉巴特",
-    "locationEn": "Morocco·Casablanca / Rabat"
-  },
-  {
-    "id": "ethnography-114",
-    "title": "《人权在摩洛哥的表演》(The Performance of Human Rights in Morocco)",
-    "year": 2005,
-    "author": "Susan Slyomovics",
-    "publisher": "University of Pennsylvania Press",
-    "summary": "摩洛哥\"公平与和解委员会\"对哈桑二世统治时期国家暴力受害者的赔偿实践，以及幸存者如何通过公开证言与纪念活动重新书写历史记忆。\n\n摩洛哥公开听证会、受害者社群、前政治犯与纪念空间的田野调查，结合人权文件、证言档案与过渡时期正义话语的批判分析。\n\n人权实践是一种\"表演\"；过渡时期正义的仪式与话语在揭示暴力的同时，也在国家框架内管控、限制了苦难表达与历史责任追究的范围。",
-    "location": "Casablanca / Rabat / Kenitra",
-    "countryOrRegion": "Morocco",
-    "lat": 33.5731,
-    "lon": -7.5898,
-    "sourceField": "摩洛哥·卡萨布兰卡 / 拉巴特 / 克尼特拉",
-    "locationEn": "Morocco·Casablanca / Rabat / Kenitra"
+    "id": "ethnography-80",
+    "title": "《声音社会主义》(Sonic Socialism)",
+    "year": 2025,
+    "author": "Christina Schwenkel",
+    "publisher": "University of California Press",
+    "summary": "新冠疫情期间，越南河内的广播喇叭、即时通讯与公共卫生视频等声音技术如何成为社会主义国家动员民众、编织照护与管控的关键基础设施。\n\n以\"声音田野调查\"（soundwork）为核心的感官自传民族志，追踪2020年疫情第一年的隔离、封控与日常声音景观。\n\n声音治理将听觉实践转化为国家权力的延伸；社会主义照护伦理在声音空间中同时编织了连接与控制的双重网络。",
+    "location": "Hanoi",
+    "countryOrRegion": "Vietnam",
+    "lat": 21.0278,
+    "lon": 105.8342,
+    "sourceField": "越南·河内",
+    "locationEn": "Vietnam·Hanoi"
   },
   {
     "id": "ethnography-115",
@@ -1642,17 +1452,303 @@ window.ETHNOGRAPHY_BOOKS = [
     "locationEn": "Indonesia·Sulawesi"
   },
   {
-    "id": "ethnography-116",
-    "title": "《虚构的空间》(The Make-Believe Space)",
-    "year": 2012,
-    "author": "Yael Navaro-Yashin",
+    "id": "ethnography-100",
+    "title": "《伊斯兰现代性》(Islamic Modern)",
+    "year": 2002,
+    "author": "Michael Peletz",
+    "publisher": "Princeton University Press",
+    "summary": "马来西亚伊斯兰宗教法庭的日常运作如何在穆斯林身份、性别秩序与国家权力之间共同建构出一种特殊的\"伊斯兰现代性\"。\n\n霹雳州宗教法庭长期参与观察，结合法庭记录档案与法官、当事人的深度访谈。\n\n伊斯兰现代性并非传统的简单延续或西方现代性的他者，而是在法律实践与政治竞争中被主动建构的混合产物。",
+    "location": "Perak / Negeri Sembilan",
+    "countryOrRegion": "Malaysia",
+    "lat": 4.5975,
+    "lon": 101.0901,
+    "sourceField": "马来西亚·霹雳州 / 森美兰州",
+    "locationEn": "Malaysia·Perak / Negeri Sembilan"
+  },
+  {
+    "id": "ethnography-89",
+    "title": "《流动性的焦虑》(The Anxieties of Mobility)",
+    "year": 2009,
+    "author": "Johan Lindquist",
+    "publisher": "University of Minnesota Press",
+    "summary": "新加坡对岸的印尼边境岛屿巴淡，如何在全球劳工迁移、性旅游与国家经济特区政策的交汇处成为一个充满情感张力与社会失序的\"焦虑空间\"。\n\n巴淡岛移民工人、性工作者、劳工中介与政府官员的多群体长期参与观察与深度访谈。\n\n全球化的流动性不是解放，而是制造了新型情感脆弱性；焦虑作为一种情动状态，揭示了移动劳动者在边境资本主义中被悬置的存在困境。",
+    "location": "Batam (Riau Islands)",
+    "countryOrRegion": "Indonesia",
+    "lat": 1.1301,
+    "lon": 104.0529,
+    "sourceField": "印度尼西亚·巴淡岛（廖内群岛）",
+    "locationEn": "Indonesia·Batam (Riau Islands)"
+  },
+  {
+    "id": "ethnography-76",
+    "title": "《曼谷的亲密经济》(The Intimate Economies of Bangkok)",
+    "year": 2004,
+    "author": "Ara Wilson",
+    "publisher": "University of California Press",
+    "summary": "曼谷的直销网络、购物中心文化与性别异质性（tom/dee关系）如何在跨国资本主义流通中共同重塑泰国的亲密关系与性别秩序。\n\n曼谷多场景田野调查，涵盖雅芳女销售员、性别多元社群与大型商场从业者的深度访谈及参与观察。\n\n\"亲密性\"是全球资本主义的核心经济逻辑而非其对立面；泰国的性别多元性既是商品化的对象，也是抵抗同质化的文化资源。",
+    "location": "Bangkok",
+    "countryOrRegion": "Thailand",
+    "lat": 13.7563,
+    "lon": 100.5018,
+    "sourceField": "泰国·曼谷",
+    "locationEn": "Thailand·Bangkok"
+  },
+  {
+    "id": "ethnography-103",
+    "title": "《无法治理的生命》(Ungovernable Life)",
+    "year": 2017,
+    "author": "Omar Dewachi",
+    "publisher": "Stanford University Press",
+    "summary": "伊拉克从萨达姆时代到美国占领后，医疗基础设施的系统性瓦解如何塑造了医生与患者的流亡轨迹，并制造出一种新型的生命政治困境。\n\n巴格达与贝鲁特医疗机构的田野调查，结合流亡医生的生命叙事、战争医学史档案与后殖民公共卫生文献的跨学科分析。\n\n战争创造了\"治理不能\"的生命地带；医疗的崩溃不是政策失败，而是主权暴力的系统性工程，将伊拉克医生与患者共同抛入无法被照护的存在困境。",
+    "location": "Baghdad / Lebanon - Beirut",
+    "countryOrRegion": "Iraq",
+    "lat": 33.3152,
+    "lon": 44.3661,
+    "sourceField": "伊拉克·巴格达 / 黎巴嫩·贝鲁特",
+    "locationEn": "Iraq·Baghdad / Lebanon·Beirut",
+    "sites": [
+      {
+        "lat": 33.3152,
+        "lon": 44.3661
+      },
+      {
+        "lat": 33.8938,
+        "lon": 35.5018
+      }
+    ]
+  },
+  {
+    "id": "ethnography-94",
+    "title": "《边缘视野》(Peripheral Visions)",
+    "year": 2008,
+    "author": "Lisa Wedeen",
+    "publisher": "University of Chicago Press",
+    "summary": "统一后的也门如何在嚼卡特（qat）聚会、媒体话语表演与部落政治的交织中，建构出脆弱而真实的民族国家想象与公民认同。\n\n萨那与哈德拉毛的多地点长期田野调查，结合媒体话语分析与公共政治表演的细密观察。\n\n\"也门人\"的身份认同是表演性建构而非历史给定；边缘性使也门成为审视现代国家、民族主义与公共空间理论的独特棱镜。",
+    "location": "Sanaa / Hadramawt",
+    "countryOrRegion": "Yemen",
+    "lat": 15.3694,
+    "lon": 44.191,
+    "sourceField": "也门·萨那 / 哈德拉毛",
+    "locationEn": "Yemen·Sanaa / Hadramawt"
+  },
+  {
+    "id": "ethnography-101",
+    "title": "《地面上的事实》(Facts on the Ground)",
+    "year": 2001,
+    "author": "Nadia Abu El-Haj",
+    "publisher": "University of Chicago Press",
+    "summary": "以色列考古学实践如何通过挖掘、命名与展示，系统性地将巴勒斯坦地景改写为犹太历史主权的物质证据与国家正当性的科学基础。\n\n以色列考古遗址、博物馆与学术机构的田野调查，结合殖民档案、考古学建制史与科学实践的民族志分析。\n\n考古学不是对过去的中性发现，而是在地面上政治性地制造历史事实的实践；领土主权通过科学知识与物质改造共同生产。",
+    "location": "Israel / Palestine",
+    "countryOrRegion": "Israel / Palestine",
+    "lat": 31.77,
+    "lon": 35.21,
+    "sourceField": "以色列 / 巴勒斯坦",
+    "locationEn": "Israel / Palestine",
+    "sites": [
+      {
+        "lat": 31.7683,
+        "lon": 35.2137
+      },
+      {
+        "lat": 31.9038,
+        "lon": 35.2034
+      }
+    ]
+  },
+  {
+    "id": "ethnography-111",
+    "title": "《废物围城》(Waste Siege)",
+    "year": 2019,
+    "author": "Sophia Stamatopoulou-Robbins",
+    "publisher": "Stanford University Press",
+    "summary": "巴勒斯坦西岸在以色列占领下，废物处理基础设施的慢性失能如何成为日常统治与生命政治的关键物质媒介。\n\n西岸多处社区、废物处理设施与国际援助机构的长期田野调查，结合技术治理文件与居民日常经验分析。\n\n废物不仅是污染，更是占领的物化形式；基础设施的系统性不运转揭示了被占领人群被系统性悬置的生存处境。",
+    "location": "West Bank",
+    "countryOrRegion": "Palestine",
+    "lat": 31.9466,
+    "lon": 35.3027,
+    "sourceField": "巴勒斯坦·西岸",
+    "locationEn": "Palestine·West Bank"
+  },
+  {
+    "id": "ethnography-77",
+    "title": "《日常转变》(Everyday Conversions)",
+    "year": 2017,
+    "author": "Attiya Ahmad",
     "publisher": "Duke University Press",
-    "summary": "土耳其控制下的北塞浦路斯居民如何在法律上不被国际承认的\"虚构\"政治实体中生活，以及这种持续的不真实感如何渗透进日常情感与物质世界。  北塞浦路斯多地田野调查，结合废弃希腊裔财产的物质文化分析与情感民族志。  政治暴力的后果以废墟与遗留物品的形式持续散发影响；情感并非仅是主观感受，而是在政治遗留物的物质性中被生产出来的，推动了人类学对情感与物质的理论化。",
-    "location": "Cyprus (Northern/Turkish-Controlled Cyprus)",
-    "countryOrRegion": "Cyprus (Northern/Turkish-Controlled Cyprus)",
-    "lat": 35.1856,
-    "lon": 33.3823,
-    "sourceField": "塞浦路斯（北塞浦路斯 / 土耳其控制区）",
-    "locationEn": "Cyprus (Northern / Turkish-Controlled Cyprus)"
+    "summary": "科威特家庭中南亚穆斯林女性佣工的宗教实践与日常照护关系，深度挑战了移民劳工研究中将其化约为受剥削受害者的刻板叙事。\n\n科威特雇主家庭的长期参与观察与南亚女性移工深度访谈，结合海湾国家移民政策与伊斯兰伦理话语分析。\n\n皈依与宗教实践不是被动顺从，而是移民女性在约束性处境中构建道德主体性、与灵性自我的主动策略。",
+    "location": "Kuwait City",
+    "countryOrRegion": "Kuwait",
+    "lat": 29.3759,
+    "lon": 47.9774,
+    "sourceField": "科威特·科威特城",
+    "locationEn": "Kuwait·Kuwait City"
+  },
+  {
+    "id": "ethnography-113",
+    "title": "《灵魂之结》(Knot of the Soul)",
+    "year": 2018,
+    "author": "Stefania Pandolfo",
+    "publisher": "University of Chicago Press",
+    "summary": "摩洛哥城市贫困青年同时遭受精神病学诊断与伊斯兰灵性治疗两套话语体系的拉锯，以及在这一张力中对自我、苦难与主体性的艰难重建。\n\n精神病院与传统治疗师（fqih）双线田野调查，结合精神分析理论文本、伊斯兰古典文献细读与患者深度叙事访谈。\n\n精神苦难是灵魂在历史暴力裂缝中寻找意义的挣扎；精神分析与伊斯兰话语在苦难主体的边界地带，形成难以调和却相互缠绕的知识角力。",
+    "location": "Casablanca / Rabat",
+    "countryOrRegion": "Morocco",
+    "lat": 33.5731,
+    "lon": -7.5898,
+    "sourceField": "摩洛哥·卡萨布兰卡 / 拉巴特",
+    "locationEn": "Morocco·Casablanca / Rabat"
+  },
+  {
+    "id": "ethnography-73",
+    "title": "《梦境攸关》(Dreams that Matter)",
+    "year": 2011,
+    "author": "Amira Mittermaier",
+    "publisher": "University of California Press",
+    "summary": "开罗穆斯林的梦境实践：梦被理解为真主的传达，并被积极诠释、分享与付诸行动，构成一种独特的伊斯兰想象地理与日常宗教伦理。\n\n开罗多处清真寺、苏菲道堂与梦境诠释圈子的长期参与观察，结合梦境叙事的话语分析与伊斯兰梦境诠释传统文献研究。\n\n梦境不是心理学意义上的潜意识，而是嵌入神圣知识论的宗教认识论实践；通过梦境研究，挑战了世俗现代性关于主体性与想象力的标准假设。",
+    "location": "Cairo",
+    "countryOrRegion": "Egypt",
+    "lat": 30.0444,
+    "lon": 31.2357,
+    "sourceField": "埃及·开罗",
+    "locationEn": "Egypt·Cairo"
+  },
+  {
+    "id": "ethnography-95",
+    "title": "《边境工作》(Border Work)",
+    "year": 2014,
+    "author": "Madeline Reeves",
+    "publisher": "Cornell University Press",
+    "summary": "中亚三国交界费尔干纳盆地山地社区中，苏联划定的边境线如何在日常生活中被体验、逾越与重塑，使抽象的国家主权成为具身的空间实践。\n\n边境村落长期驻点田野调查，结合苏联领土划分档案研究与边境管控现场的参与观察。\n\n后苏联领土政治将原本流通的生活世界割裂争议边界，通过边境居民的行走路线、身份证件与跨境日常生活积累而被具身化。",
+    "location": "Kyrgyz-Tajik-Uzbek borderlands",
+    "countryOrRegion": "Central Asia",
+    "lat": 40.5,
+    "lon": 71.0,
+    "sourceField": "中亚·吉尔吉斯 / 塔吉克 / 乌兹别克三国边界区域",
+    "locationEn": "Central Asia·Kyrgyz-Tajik-Uzbek borderlands",
+    "sites": [
+      {
+        "lat": 40.5283,
+        "lon": 72.7985
+      },
+      {
+        "lat": 40.2837,
+        "lon": 69.6222
+      },
+      {
+        "lat": 40.7821,
+        "lon": 72.3442
+      }
+    ]
+  },
+  {
+    "id": "ethnography-109",
+    "title": "《战争灵魂》(Warring Souls)",
+    "year": 2006,
+    "author": "Roxanne Varzi",
+    "publisher": "Duke University Press",
+    "summary": "伊朗伊斯兰革命后，国家通过电影、电视与殉道话语对青年主体性的系统塑造，以及年轻一代在官方信仰与内心怀疑之间的深层撕裂。\n\n德黑兰电影制作机构与青年群体的参与田野调查，结合伊朗战争电影、国家媒体话语与青年日常生活叙事的综合文本分析。\n\n革命叙事通过美学与情动技术将殉道精神铭刻于身体；当代伊朗青年既是国家意识形态的产物，也是在其内部生长出异质欲望的裂缝主体。",
+    "location": "Tehran",
+    "countryOrRegion": "Iran",
+    "lat": 35.6892,
+    "lon": 51.389,
+    "sourceField": "伊朗·德黑兰",
+    "locationEn": "Iran·Tehran"
+  },
+  {
+    "id": "ethnography-102",
+    "title": "《巴扎政治》(Bazaar Politics)",
+    "year": 2011,
+    "author": "Noah Coburn",
+    "publisher": "Stanford University Press",
+    "summary": "后塔利班时代阿富汗陶器之乡伊斯塔利夫的地方政治：部族长老、民主选举与国际援助项目如何在一个制陶小镇中相互角力，重塑社区权力格局。\n\n伊斯塔利夫社区长期田野调查，结合选举观察、陶器工匠工作坊参与与国际援助机构运作的双线追踪。\n\n阿富汗的\"民主建设\"在地方政治的具体质地中，显现为对既有权威关系的再包装而非根本性变革。",
+    "location": "Istalif (North of Kabul)",
+    "countryOrRegion": "Afghanistan",
+    "lat": 34.83,
+    "lon": 69.08,
+    "sourceField": "阿富汗·伊斯塔利夫（喀布尔以北）",
+    "locationEn": "Afghanistan·Istalif (North of Kabul)"
+  },
+  {
+    "id": "ethnography-98",
+    "title": "《乌兹别克斯坦的新女性》(The New Woman in Uzbekistan)",
+    "year": 2006,
+    "author": "Marianne Kamp",
+    "publisher": "University of Washington Press",
+    "summary": "苏联在乌兹别克斯坦推行去面纱运动（hujum）的历史：国家如何将穆斯林女性身体作为现代化改造的战场，以及女性如何以多元方式主动回应这一强制性冲击。\n\n结合苏联国家档案、党政文件与当地女性深度口述史访谈的历史民族志研究，辅以当代费尔干纳社区田野调查。\n\n乌兹别克女性在苏联现代化进程中，同时是被塑造者与具有主动性的历史行动者，去面纱运动并不必然带来解放。",
+    "location": "Fergana Valley",
+    "countryOrRegion": "Uzbekistan",
+    "lat": 40.3864,
+    "lon": 71.7864,
+    "sourceField": "乌兹别克斯坦·费尔干纳盆地",
+    "locationEn": "Uzbekistan·Fergana Valley"
+  },
+  {
+    "id": "ethnography-117",
+    "title": "《实验室生活》(Laboratory Life)",
+    "year": 1986,
+    "author": "Bruno Latour & Steve Woolgar",
+    "publisher": "Princeton University Press",
+    "summary": "追踪索尔克研究所神经内分泌实验室的日常工作，揭示科学事实如何通过社会活动、修辞与物质工具被建构出来。\n\n科学家实验室参与观察，结合对实验记录、论文草稿与办公室话语的细密分析。\n\n科学不是对客观自然的直接反映，而是被科学实践积极建构。",
+    "location": "CA, Salk Institute",
+    "countryOrRegion": "USA",
+    "lat": 32.8877,
+    "lon": -117.2448,
+    "sourceField": "美国·加州 索尔克研究所",
+    "locationEn": "USA·CA, Salk Institute"
+  },
+  {
+    "id": "ethnography-118",
+    "title": "《遮蔽的情感》(Veiled Sentiments)",
+    "year": 1986,
+    "author": "Lila Abu-Lughod",
+    "publisher": "University of California Press",
+    "summary": "埃及奥拉德阿里贝都因女性，如何通过诗歌表达被公开语言所压制的情感，包括对爱情、失落与怨恨的过渡性小诗。\n\n与贝都因女性群体的长期共居与参与观察。\n\n诗歌是女性在权威结构下服从与反抗的情感语法。",
+    "location": "Western Desert",
+    "countryOrRegion": "Egypt",
+    "lat": 28.35,
+    "lon": 29.0,
+    "sourceField": "埃及·西部沙漠",
+    "locationEn": "Egypt·Western Desert"
+  },
+  {
+    "id": "ethnography-119",
+    "title": "《希望的方法》(The Method of Hope)",
+    "year": 2004,
+    "author": "Hirokazu Miyazaki（宫崎広和）",
+    "publisher": "Stanford University Press",
+    "summary": "斐济苏瓦额人小岛民如何将对历史祈愿土地归还的希望，维持为第一性、跨越不同知识实践领域的存在性资源。  \n\n追踪请愿书、礼物交换、教堂仪式与商业活动的田野调查，结合康德、本雅明、罗蒂等哲学工作的对读分析。\n\n希望不是情感状态，而是知识形成的方法论工具。",
+    "location": "Suvavou",
+    "countryOrRegion": "Fiji",
+    "lat": -18.1248,
+    "lon": 178.4501,
+    "sourceField": "斐济·苏瓦",
+    "locationEn": "Fiji·Suvavou"
+  },
+  {
+    "id": "ethnography-120",
+    "title": "《上山采药》(Gathering Medicines)",
+    "year": 2021,
+    "author": "Judith Farquhar （冯珠娣）& Lili Lai（赖立里）",
+    "publisher": "University of Chicago Press",
+    "summary": "民族医学知识整理运动中，七个民族的传统医药知识如何在山区中被采集、分类与制度化。\n\n六年多点田野调查，跟随药物采集者并认真观察知识编码过程。\n\n民族医学并非静态的「传统」，而是在国家发展项目与地方知识的动态相遇中，不断被重新集结的过程。",
+    "location": "Southwest Mountain Regions",
+    "countryOrRegion": "China",
+    "lat": 26.05,
+    "lon": 103.15,
+    "sourceField": "中国·西南山区",
+    "locationEn": "China·Southwest Mountain Regions"
+  },
+  {
+    "id": "ethnography-121",
+    "title": "《反政治机器》(The Anti-Politics Machine)",
+    "year": 1990,
+    "author": "James Ferguson",
+    "publisher": "Cambridge University Press",
+    "summary": "莱索托的一个贫困乡村地区如何在西方发展项目的干预下，不断将政治问题技术化、将贫困去历史化与去政治化。\n\n对联合国及其刚支机构发布的发展报告进行话语分析，结合山区穿组的田野调查。\n\n「反政治机器」是发展话语的核心隐喻：将贫困归因于技术性缺陷，遮蔽其结构性根源，同时将国家权力运作通道延伸至履行边缘地区。",
+    "location": "Lesotho",
+    "countryOrRegion": "Lesotho",
+    "lat": -29.61,
+    "lon": 28.23,
+    "sourceField": "莱索托",
+    "locationEn": "Lesotho"
   }
 ];

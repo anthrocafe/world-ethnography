@@ -7,6 +7,7 @@ const globeFocusBack = document.querySelector("#globeFocusBack");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const TILT_DEFAULT = -Math.PI / 6;
+const CLOSE_BOOK_SITE_DISTANCE_KM = 320;
 
 const REGION_FOCUS = {
   amazon: {
@@ -29,7 +30,7 @@ const REGION_FOCUS = {
   },
   zomia: {
     id: "zomia",
-    label: "赞米亚高地",
+    label: "西南地区",
     centerLon: 99,
     centerLat: 24,
     /** Pill anchor (腾冲); focus camera still uses centerLon/centerLat. */
@@ -44,7 +45,7 @@ const REGION_FOCUS = {
       "ethnography-60",
       "ethnography-61",
       "ethnography-62",
-      "ethnography-64",
+      "ethnography-120",
     ]),
   },
   pacific: {
@@ -82,11 +83,11 @@ const REGION_FOCUS = {
     bookIds: new Set([
       "ethnography-24",
       "ethnography-73",
-      "ethnography-88",
       "ethnography-93",
       "ethnography-101",
       "ethnography-103",
       "ethnography-111",
+      "ethnography-118",
     ]),
   },
 };
@@ -113,12 +114,21 @@ const COVER_SLUG_BY_BOOK_ID = {
   "ethnography-71": "cheap-meat",
   "ethnography-24": "politics-of-piety",
   "ethnography-73": "dreams-that-matter",
-  "ethnography-88": "creative-reckonings",
   "ethnography-93": "an-enchanted-modern",
   "ethnography-101": "facts-on-the-ground",
   "ethnography-103": "ungovernable-life",
   "ethnography-111": "waste-siege",
+  "ethnography-118": "veiled-sentiments",
+  "ethnography-120": "gathering-medicines",
 };
+
+/** Focus-mode cover leader lines: skip these pin groups for a book so the cover anchors to another site (e.g. Iraq vs. Lebanon). */
+const FOCUS_COVER_SKIP_GROUP_KEYS_BY_BOOK_ID = {
+  "ethnography-103": new Set(["region:levant"]),
+};
+
+/** Keep Zh + En titles on one line; widen card beyond default focus-split max when needed. */
+const BOOK_CARD_TITLE_SINGLE_LINE_IDS = new Set(["ethnography-72"]);
 
 const state = {
   width: 0,
@@ -263,17 +273,41 @@ function makeOvalLandRing(centerLon, centerLat, lonRadius, latRadius, segments =
   return ring;
 }
 
+function geoDistanceKm(a, b) {
+  const toRad = (value) => (Number(value) * Math.PI) / 180;
+  const lat1 = toRad(a.lat);
+  const lat2 = toRad(b.lat);
+  const dLat = lat2 - lat1;
+  const dLon = toRad(b.lon) - toRad(a.lon);
+  const h =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
+  return 6371 * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(Math.max(0, 1 - h)));
+}
+
 function buildPinPoints(book) {
-  if (book.sites && book.sites.length > 0) {
-    return book.sites.map((site, siteIndex) => ({
-      siteIndex,
-      lat: site.lat,
-      lon: site.lon,
-      vector: sphericalToVector(site.lon, site.lat),
-    }));
+  const sourcePoints =
+    book.sites && book.sites.length > 0
+      ? book.sites.map((site, siteIndex) => ({ siteIndex, lat: site.lat, lon: site.lon }))
+      : [{ siteIndex: 0, lat: book.lat, lon: book.lon }];
+  const pinPoints = [];
+
+  for (const point of sourcePoints) {
+    const lat = Number(point.lat);
+    const lon = Number(point.lon);
+    if (!Number.isFinite(lat) || !Number.isFinite(lon)) continue;
+    if (pinPoints.some((kept) => geoDistanceKm(kept, { lat, lon }) <= CLOSE_BOOK_SITE_DISTANCE_KM)) continue;
+    pinPoints.push({
+      siteIndex: point.siteIndex,
+      lat,
+      lon,
+      vector: sphericalToVector(lon, lat),
+    });
   }
 
-  return [{ siteIndex: 0, lat: book.lat, lon: book.lon, vector: sphericalToVector(book.lon, book.lat) }];
+  return pinPoints.length > 0
+    ? pinPoints
+    : [{ siteIndex: 0, lat: book.lat, lon: book.lon, vector: sphericalToVector(book.lon, book.lat) }];
 }
 
 function pinGroupKey(lat, lon) {
@@ -321,7 +355,10 @@ function buildPinGroups(sourceBooks) {
         });
       }
 
-      groups.get(key).items.push({
+      const group = groups.get(key);
+      if (group.items.some((item) => item.book.id === book.id)) continue;
+
+      group.items.push({
         book,
         siteIndex: pinPoint.siteIndex,
       });
@@ -437,7 +474,7 @@ function resolvePublisherLabel(raw) {
 
 function splitTranslatedTitle(displayTitle) {
   const trimmed = String(displayTitle || "").trim();
-  const match = /^([\s\S]+?)\s*\(([\s\S]+)\)\s*$/.exec(trimmed);
+  const match = /^([\s\S]+?)\s*[（(]([\s\S]+)[）)]\s*$/.exec(trimmed);
   const stripBookQuotes = (value) => String(value || "").replace(/[《》]/g, "").trim();
   if (!match) return { zh: stripBookQuotes(trimmed), en: "" };
   return { zh: stripBookQuotes(match[1]), en: match[2].trim() };
@@ -558,10 +595,18 @@ function syncBookCardLayout() {
 
   const hPadViewport = window.matchMedia("(max-width: 720px)").matches ? 18 : 24;
   const focusSplit = bookCard.classList.contains("book-card--focus-split");
+  const focusMobile = bookCard.classList.contains("book-card--focus-mobile");
 
-  const maxOuter = focusSplit
-    ? Math.min(520, Math.max(300, Math.round(window.innerWidth * 0.54 - 40)))
-    : Math.min(760, window.innerWidth - hPadViewport * 2);
+  let maxOuter = focusMobile
+    ? Math.min(420, Math.max(280, Math.round(window.innerWidth - 32)))
+    : focusSplit
+      ? Math.min(520, Math.max(300, Math.round(window.innerWidth * 0.54 - 40)))
+      : Math.min(760, window.innerWidth - hPadViewport * 2);
+
+  if (BOOK_CARD_TITLE_SINGLE_LINE_IDS.has(bookCard.dataset.bookId)) {
+    const cap = window.innerWidth - hPadViewport * 2;
+    maxOuter = Math.min(Math.max(maxOuter, 640), cap);
+  }
 
   const baseMin = Math.min(420, maxOuter);
 
@@ -948,14 +993,19 @@ function buildRegionCoverLayer() {
   state.coverLayerBuiltFor = sig;
   state.coverLayoutReady = false;
   hoveredFocusBookId = null;
+  const renderedBookIds = new Set();
 
   for (const group of pinGroups) {
     if (!groupMatchesFocusRegion(group)) continue;
     for (const [itemIndex, item] of group.items.entries()) {
       if (!REGION_FOCUS[state.focusRegionId].bookIds.has(item.book.id)) continue;
+      const skipCoverKeys = FOCUS_COVER_SKIP_GROUP_KEYS_BY_BOOK_ID[item.book.id];
+      if (skipCoverKeys?.has(group.key)) continue;
+      if (renderedBookIds.has(item.book.id)) continue;
       if (searchPinsActive() && state.searchQuery.length > 0 && !bookMatchesSearchQuery(item.book, state.searchQuery)) {
         continue;
       }
+      renderedBookIds.add(item.book.id);
       const slug = COVER_SLUG_BY_BOOK_ID[item.book.id];
 
       const btn = document.createElement("button");
@@ -1026,6 +1076,10 @@ function isFocusSplitCardOpen() {
     !bookCard.classList.contains("is-hidden") &&
     bookCard.classList.contains("book-card--focus-split")
   );
+}
+
+function isMobileFocusLayout() {
+  return state.width <= 760 || window.matchMedia("(max-width: 760px)").matches;
 }
 
 function syncRegionCoverPositions() {
@@ -2594,6 +2648,7 @@ function setCardBook(group, bookIndex) {
   bookCard.dataset.bookIndex = String(safeIndex);
   bookCard.dataset.bookId = book.id;
   bookCard.dataset.siteIndex = String(item.siteIndex);
+  bookCard.classList.toggle("book-card--title-single-line", BOOK_CARD_TITLE_SINGLE_LINE_IDS.has(book.id));
   return item;
 }
 
@@ -2619,22 +2674,44 @@ function positionFocusSplitBookCard() {
   });
 }
 
+function positionMobileFocusBookCard() {
+  if (!bookCard.classList.contains("book-card--focus-mobile")) return;
+  const bottomMargin = Math.max(78, Math.min(112, state.height * 0.12));
+  bookCard.style.left = `${state.width * 0.5}px`;
+  bookCard.style.top = `${state.height - bottomMargin}px`;
+}
+
 function openBookCard(group, x, y, bookIndex = 0) {
   if (!setCardBook(group, bookIndex)) return;
   bookCard.dataset.groupKey = group.key;
   delete bookCard.dataset.anchorMode;
 
   if (state.focusMode) {
-    bookCard.classList.add("book-card--focus-split");
-    bookCard.style.top = "50%";
-    syncBookCardLayout();
-    positionFocusSplitBookCard();
-    requestAnimationFrame(() => {
-      if (!bookCard.classList.contains("book-card--focus-split")) return;
-      bookCard.classList.remove("is-hidden");
-    });
+    if (isMobileFocusLayout()) {
+      bookCard.classList.remove("book-card--focus-split");
+      bookCard.classList.add("book-card--focus-mobile");
+      bookCard.style.left = `${clamp(x, 24, state.width - 24)}px`;
+      bookCard.style.top = `${clamp(y, 96, state.height - 92)}px`;
+      syncBookCardLayout();
+      void bookCard.offsetHeight;
+      requestAnimationFrame(() => {
+        if (!bookCard.classList.contains("book-card--focus-mobile")) return;
+        positionMobileFocusBookCard();
+        bookCard.classList.remove("is-hidden");
+      });
+    } else {
+      bookCard.classList.remove("book-card--focus-mobile");
+      bookCard.classList.add("book-card--focus-split");
+      bookCard.style.top = "50%";
+      syncBookCardLayout();
+      positionFocusSplitBookCard();
+      requestAnimationFrame(() => {
+        if (!bookCard.classList.contains("book-card--focus-split")) return;
+        bookCard.classList.remove("is-hidden");
+      });
+    }
   } else {
-    bookCard.classList.remove("book-card--focus-split");
+    bookCard.classList.remove("book-card--focus-split", "book-card--focus-mobile");
     bookCard.classList.remove("is-hidden");
     syncBookCardLayout();
     bookCard.style.left = `${x}px`;
@@ -2649,16 +2726,17 @@ function openBookCard(group, x, y, bookIndex = 0) {
 
 function closeBookCard() {
   const wasFocusSplit = bookCard.classList.contains("book-card--focus-split");
+  const wasFocusMobile = bookCard.classList.contains("book-card--focus-mobile");
   if (state.focusMode) hoveredFocusBookId = null;
   bookCard.classList.add("is-hidden");
-  if (wasFocusSplit) {
+  if (wasFocusSplit || wasFocusMobile) {
     window.setTimeout(() => {
       if (bookCard.classList.contains("is-hidden")) {
-        bookCard.classList.remove("book-card--focus-split");
+        bookCard.classList.remove("book-card--focus-split", "book-card--focus-mobile", "book-card--title-single-line");
       }
     }, 400);
   } else {
-    bookCard.classList.remove("book-card--focus-split");
+    bookCard.classList.remove("book-card--focus-split", "book-card--focus-mobile", "book-card--title-single-line");
   }
   delete bookCard.dataset.bookId;
   delete bookCard.dataset.siteIndex;
@@ -2712,6 +2790,11 @@ function syncCardPosition() {
     return;
   }
 
+  if (bookCard.classList.contains("book-card--focus-mobile")) {
+    positionMobileFocusBookCard();
+    return;
+  }
+
   const groupKey = bookCard.dataset.groupKey;
   const pin = projectedPins.find((item) => item.groupKey === groupKey);
   if (!pin || pin.z <= 0.03) {
@@ -2732,6 +2815,7 @@ window.addEventListener("resize", () => {
   resize();
   syncBookCardLayout();
   if (bookCard.classList.contains("book-card--focus-split")) positionFocusSplitBookCard();
+  if (bookCard.classList.contains("book-card--focus-mobile")) positionMobileFocusBookCard();
 });
 
 canvas.addEventListener("pointerdown", onPointerDown);
