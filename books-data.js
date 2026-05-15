@@ -224,8 +224,8 @@ window.ETHNOGRAPHY_BOOKS = [
         "lon": 135.7681
       },
       {
-        "lat": 25.0389,
-        "lon": 102.7183
+        "lat": 26.05,
+        "lon": 103.15
       },
       {
         "lat": 66.5039,
@@ -629,7 +629,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-78",
-    "title": "《全球猎身》(Global Body Shopping)",
+    "title": "《全球\"猎身\"》(Global \"Body Shopping\")",
     "year": 2007,
     "author": "Biao Xiang（项飙）",
     "publisher": "Princeton University Press",

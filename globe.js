@@ -41,6 +41,7 @@ const REGION_FOCUS = {
       return lat >= 7 && lat <= 36 && lon >= 89 && lon <= 106;
     },
     bookIds: new Set([
+      "ethnography-11",
       "ethnography-59",
       "ethnography-60",
       "ethnography-61",
@@ -93,6 +94,7 @@ const REGION_FOCUS = {
 };
 
 const COVER_SLUG_BY_BOOK_ID = {
+  "ethnography-11": "the-mushroom-at-the-end-of-the-world",
   "ethnography-12": "how-forests-think",
   "ethnography-30": "the-falling-sky",
   "ethnography-31": "earth-beings",

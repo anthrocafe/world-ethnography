@@ -448,5 +448,20 @@
     "bytes": 416125,
     "status": "ok",
     "error": null
+  },
+  {
+    "slug": "the-mushroom-at-the-end-of-the-world",
+    "sheet": "西南地区",
+    "title": "The Mushroom at the End of the World",
+    "author": "Anna Lowenhaupt Tsing",
+    "year": 2015,
+    "publisher": "Princeton University Press",
+    "isbn": "9780691220550",
+    "source_page": "https://press.princeton.edu/books/paperback/9780691220550/the-mushroom-at-the-end-of-the-world",
+    "cover_url": "https://pup-assets.imgix.net/onix/images/9780691220550.jpg?w=1500&auto=format",
+    "saved_path": "assets/covers/the-mushroom-at-the-end-of-the-world.jpg",
+    "bytes": 303799,
+    "status": "ok",
+    "error": null
   }
 ]
