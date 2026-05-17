@@ -87,6 +87,8 @@ _SUMMARY_OVERRIDE_BY_BOOK_ID: dict[str, str] = {
 
 # Chinese display title tweaks not yet reflected in the spreadsheet canonical cell.
 _TITLE_OVERRIDE_BY_BOOK_ID: dict[str, str] = {
+    "ethnography-06": "《牧灵诊所》(The Pastoral Clinic)",
+    "ethnography-78": "《全球\"猎身\"》(Global \"Body Shopping\")",
     "ethnography-132": "《抵抗的灵魂和资本主义规训》(Spirits of Resistance and Capitalist Discipline: Factory Women in Malaysia)",
 }
 

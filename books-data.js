@@ -81,7 +81,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-06",
-    "title": "《乡间诊所》(The Pastoral Clinic)",
+    "title": "《牧灵诊所》(The Pastoral Clinic)",
     "year": 2010,
     "author": "Angela Garcia",
     "publisher": "University of California Press",
@@ -1133,7 +1133,7 @@ window.ETHNOGRAPHY_BOOKS = [
   },
   {
     "id": "ethnography-78",
-    "title": "《全球猎身》(Global Body Shopping)",
+    "title": "《全球\"猎身\"》(Global \"Body Shopping\")",
     "year": 2007,
     "author": "Biao Xiang（项飙）",
     "publisher": "Princeton University Press",
