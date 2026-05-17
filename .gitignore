@@ -6,3 +6,10 @@
 # Source spreadsheets — keep locally, do not publish to GitHub
 民族志信息表*.xlsx
 
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
